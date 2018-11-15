@@ -128,7 +128,7 @@
             z-index: -1;
             background-image: url('http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/hzw1.jpg');
             background-repeat: no-repeat;
-            background-position: center -356px;
+            background-position: center -156px;
             background-size: cover;
             background-color: transparent;
         }
@@ -136,7 +136,7 @@
         header.cube-background.cube-header-background {
             visibility: hidden;
             background-image: url('http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/hzw1.jpg');
-            background-position: center -400px;
+            background-position: center -200px;
         }
     </style>
     <header class="cube-background cube-header-background">
@@ -163,9 +163,159 @@
     <div class="cube-content">
         <div class="cube-left">
             
-<div class="cube-excerpt" id="cube-excerpt-hexo+github搭建博客">
+<div class="cube-excerpt" id="cube-excerpt-hexo-github搭建博客2-语法入门">
     <header class="cube-excerpt-header">
-        <h1><a href="/2018/11/14/hexo-github搭建博客/">hexo+github搭建博客</a></h1>
+        <h1><a href="/2018/11/15/hexo-github搭建博客2-语法入门/">hexo-github搭建博客2-语法入门</a></h1>
+        <div class="cube-excerpt-header-msg">
+            <div class="cube-excerpt-date">
+                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+                2018-11-15
+            </div>
+            <div class="cube-excerpt-tags">
+                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+                
+                <a href="/tags/hexo-markdown/" class="cube-excerpt-tag-link">#hexo  markdown</a>
+                
+            </div>
+        </div>
+    </header>
+    <article class="cube-excerpt-entry cube-markdown">
+        
+        
+           <p>本文内容为转载：<a href="https://blog.csdn.net/zhuzhuyule/article/details/58347687" target="_blank" rel="noopener">https://blog.csdn.net/zhuzhuyule/article/details/58347687</a><br>转载同时自己练习一下 补充一点内容</p>
+<p><a href="https://www.appinn.com/markdown/basic.html" title="Markdown" target="_blank" rel="noopener">Markdown</a> 是一种轻量级的 <strong>「标记语言」</strong>，<br><blockquote><p>优点在于：</p>
+</blockquote> </p>
+<ul>
+<li>专注你的文字内容而不是排版样式。</li>
+<li>轻松的导出 HTML、PDF 和本身的 .md 文件。 </li>
+<li>纯文本内容，兼容所有的文本编辑器与字处理软件。 </li>
+<li>可读，直观。适合所有人的写作语言。</li>
+</ul>
+<blockquote><p>并且具有以下特点：</p>
+</blockquote>
+<ul>
+<li>自动生成目录</li>
+<li>代码块高亮</li>
+<li>引用展示</li>
+<li>表格插入</li>
+<li>图片插入</li>
+<li>强调显示</li>
+<li>列表显示</li>
+<li>自动URL链接</li>
+</ul>
+<blockquote><p>Hexo下使用的MarkDown为Github的GFM，风格很漂亮，简洁美观大方。<br>但是GFM 的MarkDown语法和标准 的MarkDown稍有不同，使用过程中需要注意一些。</p>
+</blockquote>
+<h1 id="首先你要知道转义字符"><a href="#首先你要知道转义字符" class="headerlink" title="首先你要知道转义字符"></a>首先你要知道转义字符</h1><p>   <a href="http://tool.oschina.net/commons?type=2" title="转义字符常用对照表" target="_blank" rel="noopener">转义字符常用对照表</a><br>   或者用 \ 转义</p>
+<h1 id="语法简明概述"><a href="#语法简明概述" class="headerlink" title="语法简明概述"></a>语法简明概述</h1><p>分段 两个回车<br>换行 两个空格 + 回车<br>标题 # ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题<br>强调 **文字** ，\ __文字__ ， _文字_ ， *文字* ， 文字<br>引用 &gt; 注意后面紧跟个空格<br>表格 - 和 | 分割行和列 ， : 控制对其方式<br>代码块 四个空格 开头或， 使用``` 代码内容```<br>链接 [文字](链接地址)<br>图片 ![图片说明](图片地址) ，地址可以是本地路劲，也可以是网络地址<br>列表 * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格</p>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p># 欢迎使用Markdown编辑器写博客    //一级标题 对应 &#60;h1&#62; &#60;/h1\&#62;<br>## 标题输入                     //二级标题 对应 &#60;h2&#62; &#60;/h2&#62;<br>### 三级标题                    //三级标题 对应 &#60;h3&#62; &#60;/h3&#62;<br>#### 四级标题                   //四级标题 对应 &#60;h4&#62; &#60;/h4&#62;<br>##### 五级标题                  //五级标题 对应 &#60;h5&#62; &#60;/h5&#62;<br>###### 六级标题                 //六级标题 对应 &#60;h6&#62; &#60;/h6&#62;<br>####### 七级标题                //抱歉，木有了（但是他会影响生成的目录，目录行多出一行空行）</p>
+<h1 id="内容强调"><a href="#内容强调" class="headerlink" title="内容强调"></a>内容强调</h1><h2 id="加粗、斜体"><a href="#加粗、斜体" class="headerlink" title="加粗、斜体"></a>加粗、斜体</h2><p>字体 **加粗** 显示<br>字体 *斜体* 显示<br>字体 ***加粗并斜体*** 显示</p>
+<p>字体 <strong>加粗</strong> 显示<br>字体 <em>斜体</em> 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示</p>
+<p>字体 __加粗__ 显示<br>字体 _斜体_ 显示<br>字体 ___加粗并斜体___ 显示<br>组合 *__加粗并斜体__* 显示</p>
+<p>字体 <strong>加粗</strong> 显示<br>字体 _斜体_ 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示<br>组合 <em><strong>加粗并斜体</strong></em> 显示</p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>这样来 ~~删除一段文本~~</p>
+<p>这样来 <del>删除一段文本</del></p>
+<h1 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h1><p>使用<code>`</code>来强调字符   //想打出  <code>`</code> (反引号)需要转义的，加&#60;code&#62;&#60;/code&#62;标签强调<br>比如<code>`突出背景色`</code>来显示强调效果<br>上面的效果其实是这么实现的 `` `突出背景色` ``</p>
+<h1 id="引用显示"><a href="#引用显示" class="headerlink" title="引用显示"></a>引用显示</h1><p>引用过程中任然支持<code>Markdown</code>语法！</p>
+<p>标准使用<br>> 每行开始都使用 ‘>‘；<br>> 引用<strong>开始</strong>；<br>> 引用<strong>换行</strong>；<br>> 引用<strong>结束</strong>。</p>
+<p>> 还在引用中！</p>
+<p>两个回车结束引用！</p>
+<blockquote>
+<p>每行开始都使用 ‘&gt;’；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>。</p>
+</blockquote>
+<blockquote>
+<p>还在引用中！</p>
+</blockquote>
+<p><code>两个回车</code>结束引用！</p>
+<h1 id="省略使用"><a href="#省略使用" class="headerlink" title="省略使用"></a>省略使用</h1><p>> 仅第一行加引用；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>；</p>
+<p>两个回车结束引用,不在引用范围内了！</p>
+<blockquote>
+<p>仅第一行加引用；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>；</p>
+</blockquote>
+<p><code>两个回车</code>结束引用,不在引用范围内了！</p>
+<h1 id="嵌套使用"><a href="#嵌套使用" class="headerlink" title="嵌套使用"></a>嵌套使用</h1><p>> 动物<br>>> 水生动物<br>>> 陆生动物<br>>>> 猴子<br>>>> 人<br>>>>> 程序猿<br>>>>> 攻城狮<br>>>产品狗 //这里需要注意，没有空行间隔，忽略降级引用标记<br>射鸡虱   //这里需要注意，没有空行间隔，忽略降级引用标记</p>
+<p>>> 两栖类动物<br>>>> 大鳄鱼<br>唐老鸭</p>
+<p><code>两个回车</code>结束引用,不在引用范围内了！</p>
+<blockquote>
+<p>动物</p>
+<blockquote>
+<p>水生动物<br>陆生动物</p>
+<blockquote>
+<p>猴子<br>人</p>
+<blockquote>
+<p>程序猿<br>攻城狮<br>产品狗 //没有空行间隔，忽略降级引用标记<br>射鸡虱   //没有空行间隔，忽略降级引用标记</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>两栖类动物</p>
+<blockquote>
+<p>大鳄鱼<br>唐老鸭</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><code>两个回车</code>结束引用,不在引用范围内了！</p>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><h2 id="表格语法："><a href="#表格语法：" class="headerlink" title="表格语法："></a>表格语法：</h2><p>列1   | 列2 | 列3<br>----- | ---| ----<br>第1行 | 12  | 13<br>第2行 | 22  | 23<br>第3行 | 32  | 33  </p>
+<table>
+<thead>
+<tr>
+<th>列1</th>
+<th>列2</th>
+<th>列3 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1行</td>
+<td>12</td>
+<td>13  </td>
+</tr>
+<tr>
+<td>第2行</td>
+<td>22</td>
+<td>23  </td>
+</tr>
+<tr>
+<td>第3行</td>
+<td>32</td>
+<td>33  </td>
+</tr>
+</tbody>
+</table>
+<h2 id="可以使用冒号来定义对齐方式："><a href="#可以使用冒号来定义对齐方式：" class="headerlink" title="可以使用冒号来定义对齐方式："></a>可以使用冒号来定义对齐方式：</h2><p>| 左对齐    |  右对齐 | 居中 |<br>| :——– | ——-:| :–: |<br>| Computer  | 5000 元 |  1台 |<br>| Phone     | 1999 元 |  1部 |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:right">右对齐</th>
+<th style="text-align:center">居中</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Computer</td>
+<td style="text-align:right">5000 元</td>
+<td style="text-align:center">1台</td>
+</tr>
+<tr>
+<td style="text-align:left">Phone</td>
+<td style="text-align:right">1999 元</td>
+<td style="text-align:center">1部</td>
+</tr>
+</tbody>
+</table>
+
+        
+    </article>
+    <footer class="cube-excerpt-footer">
+        <a class="cube-excerpt-more" href="/2018/11/15/hexo-github搭建博客2-语法入门/">Read More</a>
+    </footer>
+</div>
+
+<div class="cube-excerpt" id="cube-excerpt-hexo-github搭建博客1-小试牛刀">
+    <header class="cube-excerpt-header">
+        <h1><a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/">hexo-github搭建博客1-小试牛刀</a></h1>
         <div class="cube-excerpt-header-msg">
             <div class="cube-excerpt-date">
                 <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
@@ -182,25 +332,21 @@
     <article class="cube-excerpt-entry cube-markdown">
         
         
-           <p>一、准备环境：</p>
-<p>1、安装Node.js环境；</p>
-<p>2、安装Git环境，主要是用于直接同步生成的博客；</p>
-<p>3、通过npm安装Hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入npm install hexo -g，开始安装Hexo</span><br><span class="line">输入hexo -v，检查hexo是否安装成功</span><br></pre></td></tr></table></figure></p>
-<p> 二、初始化blog：</p>
-<p> 1、新建blog文件夹</p>
-<p> 2、通过Hexo初始化blog<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入blog文件夹</span><br><span class="line">输入hexo init，初始化该文件夹</span><br><span class="line">输入npm install，安装所需要的组件</span><br><span class="line">输入hexo g，生成blog发布文件</span><br><span class="line">输入hexo s，开启服务器</span><br></pre></td></tr></table></figure></p>
-<p> 关联Githb</p>
-<p>1、创建Github账号</p>
-<p> 2、创建仓库， 仓库名为：&lt;Github账号名称&gt;.github.io<br>      github repositories  Settings<br>      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">repositories name : sumnear.github.io</span><br><span class="line">Custom domain 设置自己的域名 sumnear.top</span><br><span class="line">  </span><br></pre></td></tr></table></figure></p>
-<p> 3、将本地Hexo博客推送到GithubPages<br> 3.1  安装hexo-deployer-git插件。在命令行（即Git Bash）运行以下命令即可：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>  3.2   修改_config.yml（在站点目录下）。文件末尾修改为：<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line"> </span><br></pre></td></tr></table></figure></p>
-<p>3.3 设置Git的user name和email<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;sumnear&quot;</span><br><span class="line">git config --global user.email &quot;402347012@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
-<p>3.4 hexo把blog内容推送到github上<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d   </span><br></pre></td></tr></table></figure></p>
+           <h2 id="一、准备环境："><a href="#一、准备环境：" class="headerlink" title="一、准备环境："></a>一、准备环境：</h2><h4 id="1、安装Node-js环境；"><a href="#1、安装Node-js环境；" class="headerlink" title="1、安装Node.js环境；"></a>1、安装Node.js环境；</h4><h4 id="2、安装Git环境，主要是用于直接同步生成的博客；"><a href="#2、安装Git环境，主要是用于直接同步生成的博客；" class="headerlink" title="2、安装Git环境，主要是用于直接同步生成的博客；"></a>2、安装Git环境，主要是用于直接同步生成的博客；</h4><h4 id="3、通过npm安装Hexo"><a href="#3、通过npm安装Hexo" class="headerlink" title="3、通过npm安装Hexo"></a>3、通过npm安装Hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入npm install hexo -g，开始安装Hexo</span><br><span class="line">输入hexo -v，检查hexo是否安装成功</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="二、初始化blog："><a href="#二、初始化blog：" class="headerlink" title="二、初始化blog："></a>二、初始化blog：</h2><h4 id="1、新建blog文件夹"><a href="#1、新建blog文件夹" class="headerlink" title="1、新建blog文件夹"></a>1、新建blog文件夹</h4><h4 id="2、通过Hexo初始化blog"><a href="#2、通过Hexo初始化blog" class="headerlink" title="2、通过Hexo初始化blog"></a>2、通过Hexo初始化blog</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入blog文件夹</span><br><span class="line">输入hexo init，初始化该文件夹</span><br><span class="line">输入npm install，安装所需要的组件</span><br><span class="line">输入hexo g，生成blog发布文件</span><br><span class="line">输入hexo s，开启服务器</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="三、关联Githb并推送"><a href="#三、关联Githb并推送" class="headerlink" title="三、关联Githb并推送"></a>三、关联Githb并推送</h2><h4 id="1、创建Github账号"><a href="#1、创建Github账号" class="headerlink" title="1、创建Github账号"></a>1、创建Github账号</h4><h4 id="2、创建仓库，-仓库名为：-lt-Github账号名称-gt-github-io"><a href="#2、创建仓库，-仓库名为：-lt-Github账号名称-gt-github-io" class="headerlink" title="2、创建仓库， 仓库名为：&lt;Github账号名称&gt;.github.io"></a>2、创建仓库， 仓库名为：&lt;Github账号名称&gt;.github.io</h4><pre><code>github repositories  Settings
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">repositories name : sumnear.github.io</span><br><span class="line">Custom domain 设置自己的域名 sumnear.top</span><br></pre></td></tr></table></figure>
+<h4 id="3、将本地Hexo博客推送到GithubPages"><a href="#3、将本地Hexo博客推送到GithubPages" class="headerlink" title="3、将本地Hexo博客推送到GithubPages"></a>3、将本地Hexo博客推送到GithubPages</h4><p> <strong>3.1  安装hexo-deployer-git插件。在命令行（即Git Bash）运行以下命令即可：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>  <strong>3.2   修改_config.yml（在站点目录下）。文件末尾修改为：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p><strong>3.3 设置Git的user name和email</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;sumnear&quot;</span><br><span class="line">git config --global user.email &quot;402347012@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p><strong>3.4 hexo把blog内容推送到github上</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d   </span><br></pre></td></tr></table></figure></p>
 
         
     </article>
     <footer class="cube-excerpt-footer">
-        <a class="cube-excerpt-more" href="/2018/11/14/hexo-github搭建博客/">Read More</a>
+        <a class="cube-excerpt-more" href="/2018/11/14/hexo-github搭建博客1-小试牛刀/">Read More</a>
     </footer>
 </div>
 
@@ -269,8 +415,8 @@
     <a title="SEARCH FOR MY ONE PIECE">SEARCH FOR MY ONE PIECE</a>
     
     <div class="count">
-        <a class="count articles"><span>1</span>Article</a>
-        <a class="count tags"><span>1</span>Tags</a>
+        <a class="count articles"><span>2</span>Article</a>
+        <a class="count tags"><span>2</span>Tags</a>
         <a class="count categories"><span>1</span>Categories</a>
     </div>
 </div>
@@ -308,10 +454,23 @@
                     <span>1</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/11/14/hexo-github搭建博客/" title="hexo+github搭建博客">hexo+github搭建博客</a>
+                    <a href="/2018/11/15/hexo-github搭建博客2-语法入门/" title="hexo-github搭建博客2-语法入门">hexo-github搭建博客2-语法入门</a>
                 </p>
             </div>
             
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>2</span>
+                </p>
+                <p class="title">
+                    <a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/" title="hexo-github搭建博客1-小试牛刀">hexo-github搭建博客1-小试牛刀</a>
+                </p>
+            </div>
         </li>
         
         
@@ -345,6 +504,11 @@
         
         <div class="cube-box ">
             <a href="/tags/hexo/">#hexo</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/hexo-markdown/">#hexo  markdown</a>
         </div>
         
     </div>
