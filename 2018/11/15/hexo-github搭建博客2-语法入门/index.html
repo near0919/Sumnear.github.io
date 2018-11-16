@@ -32,7 +32,7 @@
 
         .cube-loading:before {
             display: block;
-            content: 'Loading';
+            content: '加载中';
             position: relative;
             width: 100%;
             top: 50%;
@@ -56,6 +56,17 @@
             }
         }
     </style>
+    
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b16dbde837be836c56dfa2bd15c1bb4c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
     
 </head></html>
 <body>
@@ -94,11 +105,11 @@
     <ul class="cube-menu-list">
         
         <li>
-            <a class="lrc-control">Open Lyrics</a>
+            <a class="lrc-control">开启歌词</a>
         </li>
         
         <li>
-            <a class="scroll-to-top">Top</a>
+            <a class="scroll-to-top">回到顶部</a>
         </li>
     </ul>
 </nav>
@@ -304,7 +315,64 @@
 </tr>
 </tbody>
 </table>
-
+<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><p>代码块语法遵循标准 <code>markdown</code> 代码，使用```开始，```结束 例如：</p>
+<p>```Python<br>#!/usr/bin/env python<br># -<em>- coding: utf-8 -</em>-<br>print ‘Hello World!<br> ```</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Hello World!</span></span><br></pre></td></tr></table></figure>
+<p> 如何在代码块中打出 ```<br> 实际上是使用 4个` 包含 3个` 就可以了，想表示更多，最外层+1就好了。<br> ````<br> ```<br> ```<br> ````   </p>
+<h1 id="链接插入"><a href="#链接插入" class="headerlink" title="链接插入"></a>链接插入</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[首页](http://zhuzhuyule.xyz)</span><br><span class="line">[我的信息](/about/)</span><br><span class="line">[纪念册](https://love.zhuzhuyule.xyz/)</span><br></pre></td></tr></table></figure>
+<p> <a href="http://zhuzhuyule.xyz" target="_blank" rel="noopener">首页</a><br> <a href="/about/">我的信息</a><br> <a href="https://love.zhuzhuyule.xyz/" target="_blank" rel="noopener">纪念册</a>  </p>
+<h1 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h1> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> ![图片alt](图片地址 &quot;图片title&quot;)  </span><br><span class="line"> 图片alt就是显示在图片下面的文字，相当于对图片内容的解释。 </span><br><span class="line"> 图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加  </span><br><span class="line">![我的头像](http://zhuzhuyule.xyz/images/avatar.png)  </span><br><span class="line">![我的头像](/images/avatar.png)</span><br></pre></td></tr></table></figure>
+<p> <img src="http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png" alt="我的头像"><br> <img src="./hexo-github搭建博客2-语法入门/PerfectTime.png.png" alt="我的头像">  </p>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p> * *列表展示<br> * *列表展示<br>    * *列表展示<br> + +列表展示<br> + +列表展示<br>    + +列表展示<br> - -列表展示<br> - -列表展示<br>    - -列表展示</p>
+<ul>
+<li>*列表展示</li>
+<li>*列表展示<ul>
+<li>*列表展示</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>+列表展示</li>
+<li>+列表展示<ul>
+<li>+列表展示</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>-列表展示</li>
+<li><p>-列表展示</p>
+<ul>
+<li>-列表展示  </li>
+</ul>
+<h2 id="有序列表-数字加点-二级序列-3个空格"><a href="#有序列表-数字加点-二级序列-3个空格" class="headerlink" title="有序列表   数字加点    二级序列 3个空格"></a>有序列表   数字加点    二级序列 3个空格</h2></li>
+</ul>
+<p>这种方式不用手动设置序号，自动生成列表序列</p>
+<ol>
+<li><strong>我是一级序列</strong> </li>
+<li><strong>我是一级序列</strong> </li>
+<li><strong>我是一级序列</strong> <ol>
+<li><em>我是二级序列</em> </li>
+<li><em>我是二级序列</em> </li>
+<li><em>我是二级序列</em> </li>
+</ol>
+</li>
+<li><strong>我是一级序列</strong> </li>
+<li><strong>我是一级序列</strong> <ol>
+<li><em>我是二级序列</em> </li>
+<li><em>我是二级序列</em> </li>
+<li><em>我是二级序列</em> <ol>
+<li><em>我是三级序列</em>  </li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>#链接自动检测  </p>
+<p>[超链接名](超链接地址 “超链接title”)<br>title可加可不加</p>
+<p> 首页:<a href="http://zhuzhuyule.xyz" target="_blank" rel="noopener">http://zhuzhuyule.xyz</a><br> 我的信息:<a href="http://zhuzhuyule.xyz/about/" target="_blank" rel="noopener">http://zhuzhuyule.xyz/about/</a><br> 纪念册:<a href="https://love.zhuzhuyule.xyz/" target="_blank" rel="noopener">https://love.zhuzhuyule.xyz/</a></p>
+<hr>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>  三个或者三个以上的 - 或者 * 都可以。  </p>
+<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a><a href="https://www.jianshu.com/p/b03a8d7b1719" title="详细。。" target="_blank" rel="noopener">流程图</a></h1>
     </div>
 </div>
 
@@ -333,7 +401,7 @@
 
 <div class="cube-search cube-sidebar" id="cube-search">
     <div class="search-container">
-        <input type="text" placeholder="Search" class="cube-search-input" id="cube-search-input">
+        <input type="text" placeholder="搜索" class="cube-search-input" id="cube-search-input">
         <i class="cube-icon cube-icon-search cube-search-submit" aria-hidden="true"></i>
     </div>
     <!-- TODO 通过给window赋一个全局变量，通过脚本赋值 -->
@@ -348,7 +416,7 @@
 </script>
 <div class="cube-search-form">
     <div class="cube-search-control">
-        <input type="text" placeholder="Search" class="search-input">
+        <input type="text" placeholder="搜索" class="search-input">
         <a class="close-button">
             <i class="cube-icon cube-close" aria-hidden="true"></i>
         </a>
@@ -366,9 +434,9 @@
     <a title="SEARCH FOR MY ONE PIECE">SEARCH FOR MY ONE PIECE</a>
     
     <div class="count">
-        <a class="count articles"><span>2</span>Article</a>
-        <a class="count tags"><span>2</span>Tags</a>
-        <a class="count categories"><span>1</span>Categories</a>
+        <a class="count articles"><span>2</span>文章</a>
+        <a class="count tags"><span>2</span>标签</a>
+        <a class="count categories"><span>1</span>分类</a>
     </div>
 </div>
 
@@ -380,10 +448,10 @@
 <script>
     (function (window) {
         window.musicModule = {}
-        window.musicModule.musicConfig = '{"narrow":false,"autoplay":false,"showlrc":3,"theme":"#b7daff","mutex":true,"mode":"circulation","preload":"auto","listmaxheight":"513px","music":[{"title":"PerfectTime","author":"泽野弘之","url":"https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.mp3","lrc":"http://cube-1252774894.cosgz.myqcloud.com/music/lrc/Dear friends - TRIPLANE.lrc","pic":"http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png"}]}'
+        window.musicModule.musicConfig = '{"narrow":false,"autoplay":false,"showlrc":0,"theme":"#b7daff","mutex":true,"mode":"circulation","preload":"auto","listmaxheight":"513px","music":[{"title":"PerfectTime","author":"泽野弘之","url":"https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.mp3","pic":"http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png"},{"title":"はるかな旅","author":"吉田洁","url":"https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/はるかな旅.mp3","pic":"http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png"},{"title":"春风再美也比不上你的笑，没见过你的人自然不会明了","author":"十指流玉","url":"https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/春风再美也比不上你的笑，没见过你的人自然不会明了.mp3","pic":"http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png"}]}'
         window.musicModule.lrcConfig = {
-            open: 'Open Lyrics',
-            close: 'Close Lyrics'
+            open: '开启歌词',
+            close: '关闭歌词'
         }
     })(window)
 </script>
@@ -392,7 +460,7 @@
 
 <div class="cube-recent-posts cube-sidebar" id="cube-recent-posts">
     <div class="title">
-        <a>Recent Posts</a>
+        <a>近期文章</a>
     </div>
     <ul class="list">
         
@@ -432,12 +500,12 @@
 
 <div class="cube-categories cube-sidebar" id="cube-categories">
     <div class="title">
-        <a href="/categories">Categories</a>
+        <a href="/categories">分类</a>
     </div>
     <div class="cube-boxs">
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/categories/hexo/">#hexo</a>
         </div>
         
@@ -448,12 +516,12 @@
 
 <div class="cube-tagcloud cube-sidebar" id="cube-tagcloud">
     <div class="title">
-        <a href="/tags">Tagcloud</a>
+        <a href="/tags">标签云</a>
     </div>
     <div class="cube-boxs">
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/tags/hexo/">#hexo</a>
         </div>
         
@@ -469,7 +537,7 @@
 
 <div class="cube-links cube-sidebar" id="cube-links">
     <div class="title">
-        <a>Links</a>
+        <a>个人链接</a>
     </div>
     <ul class="list">
         
@@ -504,7 +572,7 @@
 
 <div class="cube-friend-links cube-sidebar" id="cube-friend-links">
     <div class="title">
-        <a>Friend Links</a>
+        <a>友情链接</a>
     </div>
     <ul class="list">
         
@@ -544,5 +612,5 @@ Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a
 <script src="/js/script.js"></script>
 <!-- endinject -->
 <div class="cube-loading out"></div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":1.5,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-40},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.8,"opacityOnHover":0.2}});</script></body>
 </html>
