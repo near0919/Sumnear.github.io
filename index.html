@@ -198,7 +198,10 @@
 <h3 id="载入图片"><a href="#载入图片" class="headerlink" title="载入图片"></a>载入图片</h3><p>1 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true，之后生成的博文则会在同路径下增加一个同名文件夹，用来放资源。</p>
 <p>2 执行 npm install hexo-asset-image –save</p>
 <p>3 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：<br>![你想输入的替代文字](xxxx/图片名.jpg)</p>
-<h3 id="CNAME-问题"><a href="#CNAME-问题" class="headerlink" title="CNAME 问题"></a>CNAME 问题</h3><p><code>gitpage</code>里面可以设置自己的域名访问，首先域名配置<code>CNAME</code> = 自己的 gitpage，然后在仓库设置 <code>custom domain</code> ；每次 hexo deploy 之后，custom domain<br>都会被重置为空，在hexo的<code>source目录</code>下 新建一个 <code>CANME 文件</code>，在里面写上你自己的域名，之后再提交就不会有问题啦！！</p>
+<h3 id="CNAME-问题"><a href="#CNAME-问题" class="headerlink" title="CNAME 问题"></a>CNAME 问题</h3><p><code>gitpage</code>里面可以设置自己的域名访问，首先域名配置<code>CNAME</code> = 自己的 gitpage，然后在仓库设置 <code>custom domain</code> ；<br>  每次 hexo deploy 之后，custom domain 都会被重置为空，在hexo的<code>source目录</code>下 新建一个 <code>CANME 文件</code>，在里面写上你自己的域名，之后再提交就不会有问题啦！！  </p>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p><a href="https://github.com/ZEROKISEKI/hexo-theme-cube" target="_blank" rel="noopener">我用的主题</a><br>搜索框的设计样式参考了ppoffice的设计样式,只要进行输入即可进行对应的搜索, 此功能需要在您的Hexo站点上进行hexo-generator-json-content的安装和设置<br><code>npm install hexo-generator-json-content --save</code><br>然后在您的Hexo站点的_config.yml(非主题的_config.yml)上进行对应的设置:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">  pages:</span><br><span class="line">    title: true</span><br><span class="line">    text: true</span><br><span class="line">    path: true</span><br><span class="line">    preview: true</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    text: true</span><br><span class="line">    path: true</span><br><span class="line">    preview: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="tags和categories页面"><a href="#tags和categories页面" class="headerlink" title="tags和categories页面"></a>tags和categories页面</h3><p>默认是没有 categories 和 tags 的；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;tags&quot;  </span><br><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure></p>
+<p>编辑source下的tags和categories目录下的md文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure></p>
 
         
     </article>
@@ -218,7 +221,9 @@
             <div class="cube-excerpt-tags">
                 <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
                 
-                <a href="/tags/hexo-markdown/" class="cube-excerpt-tag-link">#hexo  markdown</a>
+                <a href="/tags/hexo/" class="cube-excerpt-tag-link">#hexo</a>
+                
+                <a href="/tags/markdown/" class="cube-excerpt-tag-link">#markdown</a>
                 
             </div>
         </div>
@@ -617,12 +622,12 @@
         
         
         <div class="cube-box ">
-            <a href="/tags/hexo-markdown/">#hexo  markdown</a>
+            <a href="/tags/hexo/">#hexo</a>
         </div>
         
         
         <div class="cube-box ">
-            <a href="/tags/hexo/">#hexo</a>
+            <a href="/tags/markdown/">#markdown</a>
         </div>
         
     </div>
@@ -673,20 +678,14 @@
         
         <li>
             <!-- TODO change avatar.png to friend.png-->
-            <img src="http://cube-1252774894.cosgz.myqcloud.com/friend_links/micblo.png">
-            <a href="https://blog.micblo.com/" target="_blank">罗大佬</a>
-        </li>
-        
-        <li>
-            <!-- TODO change avatar.png to friend.png-->
-            <img src="http://cube-1252774894.cosgz.myqcloud.com/friend_links/DIYgod.jpg">
-            <a href="https://www.anotherhome.net/" target="_blank">DIYgod</a>
-        </li>
-        
-        <li>
-            <!-- TODO change avatar.png to friend.png-->
             <img src="/images/friend_links.jpg ">
-            <a href="https://aonosora.com/" target="_blank">咪西西の部落格</a>
+            <a href="http://ZEROKISEKI.github.io" target="_blank">主题作者</a>
+        </li>
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="https://mrkaorou.github.io/images/avatar.jpeg">
+            <a href="https://mrkaorou.github.io" target="_blank">推荐人糜</a>
         </li>
         
     </ul>
