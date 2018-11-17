@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Sumnear">
+    
+    <meta name="description" content="SEARCH FOR MY ONE PIECE">
+    
+    
+    
+    
+    
+    
+    <title>Sumnear&#39;s coding life</title>
+    <!-- inject:style -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <!-- endinject -->
+    <style>
+        .cube-loading {
+            top: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url('/images/lg/loading.gif') no-repeat center center;
+            background-color: rgba(0,0,0,.7);
+        }
+
+        .cube-loading.out {
+            display: none;
+        }
+
+        .cube-loading:before {
+            display: block;
+            content: '加载中';
+            position: relative;
+            width: 100%;
+            top: 50%;
+            right: -50%;
+            color: #fff;
+        }
+
+        @media(max-width: 768px) {
+            .cube-loading:before {
+                font-size: 1.2em;
+                transform: translate(-24px,20px);
+                -webkit-transform: translate(-24px,20px);
+                -o-transform: translate(-24px,20px);
+                -ms-transform: translate(-24px,20px);
+            }
+        }
+
+        @media(min-width: 768px) {
+            .cube-loading:before {
+
+            }
+        }
+    </style>
+    
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b16dbde837be836c56dfa2bd15c1bb4c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    
+</head></html>
+<body>
+<div class="cube-body">
+    <nav id="cube-top-memu" class="cube-menu">
+    <ul class="cube-menu-collapse">
+        
+        <li>
+            <i class="cube-icon cube-icon-home" aria-hidden="true"></i>
+            <a href="/">首页</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-archive" aria-hidden="true"></i>
+            <a href="/archives">归档</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-categories" aria-hidden="true"></i>
+            <a href="/categories">分类</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-tags" aria-hidden="true"></i>
+            <a href="/tags">标签</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-about" aria-hidden="true"></i>
+            <a href="/about-me">关于我</a>
+        </li>
+        
+    </ul>
+</nav>
+<nav class="cube-side-menu" id="cube-side-menu">
+    <ul class="cube-menu-list">
+        
+        <li>
+            <a class="lrc-control">开启歌词</a>
+        </li>
+        
+        <li>
+            <a class="scroll-to-top">回到顶部</a>
+        </li>
+    </ul>
+</nav>
+    <header class="cube-header" id="cube-header">
+    <img src=" http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/hzw1.jpg " alt="头部背景图片">
+    
+    <div class="cube-type">
+        <span class="cube-typed-title">Sumnear&#39;s coding life</span>
+        <span class="cube-typed-cursor">|</span>
+    </div>
+    
+</header>
+
+    <style>
+        nav.cube-menu:before {
+            content: '';
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 44px;
+        
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+        
+            z-index: -1;
+            background-image: url('http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/hzw1.jpg');
+            background-repeat: no-repeat;
+            background-position: center -156px;
+            background-size: cover;
+            background-color: transparent;
+        }
+
+        header.cube-background.cube-header-background {
+            visibility: hidden;
+            background-image: url('http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/hzw1.jpg');
+            background-position: center -200px;
+        }
+    </style>
+    <header class="cube-background cube-header-background">
+        
+        <div class="cube-type">
+            <span class="cube-typed-title">Sumnear&#39;s coding life</span>
+            <span class="cube-typed-cursor">|</span>
+        </div>
+        
+    </header>
+    <div class="load-header-background"></div>
+    <script>
+        (function (window) {
+
+            window.headerModule = {}
+            window.headerModule.image = {
+                width: '2000',
+                height: '1414'
+            }
+
+        })(window)
+    </script>
+    
+    <div class="cube-content">
+        <div class="cube-left">
+            
+<div class="cube-excerpt" id="cube-excerpt-hexo-github搭建博客3-问题整理">
+    <header class="cube-excerpt-header">
+        <h1><a href="/2018/11/17/hexo-github搭建博客3-问题整理/">hexo-github搭建博客3-问题整理</a></h1>
+        <div class="cube-excerpt-header-msg">
+            <div class="cube-excerpt-date">
+                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+                2018-11-17
+            </div>
+            <div class="cube-excerpt-tags">
+                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+                
+            </div>
+        </div>
+    </header>
+    <article class="cube-excerpt-entry cube-markdown">
+        
+        
+           <blockquote><p>持续更新：</p>
+</blockquote>
+<h3 id="hexo官方文档"><a href="#hexo官方文档" class="headerlink" title="hexo官方文档"></a><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官方文档</a></h3><h3 id="2d插件"><a href="#2d插件" class="headerlink" title="2d插件"></a>2d插件</h3><p>1.安装这个live2d插件<br>检查package.json里有没有 hexo-heloper-live2d 依赖，有的话先卸载了，然后重新安装一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-helper-live2d  </span><br><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>  </p>
+<p>2.下载动画model<br>  <a href="https://github.com/xiazeyu/live2d-widget-models.git" target="_blank" rel="noopener">点这里</a><br>  <code>https://github.com/xiazeyu/live2d-widget-models.git</code><br>3.将packages里面所有的模版放到你博客的node_modules目录里<br>4.配置博客的配置文件，_config.yml<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https://github.com/xiazeyu/live2d-widget.js</span><br><span class="line">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span><br><span class="line">live2d:</span><br><span class="line">  model:</span><br><span class="line">    scale: 1</span><br><span class="line">    hHeadPos: 0.5</span><br><span class="line">    vHeadPos: 0.618</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">    position: right</span><br><span class="line">    hOffset: 0</span><br><span class="line">    vOffset: -20</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br><span class="line">    scale: 0.5</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7</span><br><span class="line">    opacityOnHover: 0.2</span><br></pre></td></tr></table></figure></p>
+<h3 id="载入图片"><a href="#载入图片" class="headerlink" title="载入图片"></a>载入图片</h3><p>1 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true，之后生成的博文则会在同路径下增加一个同名文件夹，用来放资源。</p>
+<p>2 执行 npm install hexo-asset-image –save</p>
+<p>3 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：<br>![你想输入的替代文字](xxxx/图片名.jpg)</p>
+<h3 id="CNAME-问题"><a href="#CNAME-问题" class="headerlink" title="CNAME 问题"></a>CNAME 问题</h3><p><code>gitpage</code>里面可以设置自己的域名访问，首先域名配置<code>CNAME</code> = 自己的 gitpage，然后在仓库设置 <code>custom domain</code> ；每次 hexo deploy 之后，custom domain<br>都会被重置为空，在hexo的<code>source目录</code>下 新建一个 <code>CANME 文件</code>，在里面写上你自己的域名，之后再提交就不会有问题啦！！</p>
+
+        
+    </article>
+    <footer class="cube-excerpt-footer">
+        <a class="cube-excerpt-more" href="/2018/11/17/hexo-github搭建博客3-问题整理/">阅读全文</a>
+    </footer>
+</div>
+
+<div class="cube-excerpt" id="cube-excerpt-hexo-github搭建博客2-语法入门">
+    <header class="cube-excerpt-header">
+        <h1><a href="/2018/11/15/hexo-github搭建博客2-语法入门/">hexo-github搭建博客2-语法入门</a></h1>
+        <div class="cube-excerpt-header-msg">
+            <div class="cube-excerpt-date">
+                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+                2018-11-15
+            </div>
+            <div class="cube-excerpt-tags">
+                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+                
+                <a href="/tags/hexo-markdown/" class="cube-excerpt-tag-link">#hexo  markdown</a>
+                
+            </div>
+        </div>
+    </header>
+    <article class="cube-excerpt-entry cube-markdown">
+        
+        
+           <p>本文内容为转载：<a href="https://blog.csdn.net/zhuzhuyule/article/details/58347687" target="_blank" rel="noopener">https://blog.csdn.net/zhuzhuyule/article/details/58347687</a><br>转载同时自己练习一下 补充一点内容</p>
+<p><a href="https://www.appinn.com/markdown/basic.html" title="Markdown" target="_blank" rel="noopener">Markdown</a> 是一种轻量级的 <strong>「标记语言」</strong>，<br><blockquote><p>优点在于：</p>
+</blockquote> </p>
+<ul>
+<li>专注你的文字内容而不是排版样式。</li>
+<li>轻松的导出 HTML、PDF 和本身的 .md 文件。 </li>
+<li>纯文本内容，兼容所有的文本编辑器与字处理软件。 </li>
+<li>可读，直观。适合所有人的写作语言。</li>
+</ul>
+<blockquote><p>并且具有以下特点：</p>
+</blockquote>
+<ul>
+<li>自动生成目录</li>
+<li>代码块高亮</li>
+<li>引用展示</li>
+<li>表格插入</li>
+<li>图片插入</li>
+<li>强调显示</li>
+<li>列表显示</li>
+<li>自动URL链接</li>
+</ul>
+<blockquote><p>Hexo下使用的MarkDown为Github的GFM，风格很漂亮，简洁美观大方。<br>但是GFM 的MarkDown语法和标准 的MarkDown稍有不同，使用过程中需要注意一些。</p>
+</blockquote>
+<h1 id="首先你要知道转义字符"><a href="#首先你要知道转义字符" class="headerlink" title="首先你要知道转义字符"></a>首先你要知道转义字符</h1><p>   <a href="http://tool.oschina.net/commons?type=2" title="转义字符常用对照表" target="_blank" rel="noopener">转义字符常用对照表</a><br>   或者用 \ 转义</p>
+<h1 id="语法简明概述"><a href="#语法简明概述" class="headerlink" title="语法简明概述"></a>语法简明概述</h1><p>分段 两个回车<br>换行 两个空格 + 回车<br>标题 # ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题<br>强调 **文字** ，\ __文字__ ， _文字_ ， *文字* ， 文字<br>引用 &gt; 注意后面紧跟个空格<br>表格 - 和 | 分割行和列 ， : 控制对其方式<br>代码块 四个空格 开头或， 使用``` 代码内容```<br>链接 [文字](链接地址)<br>图片 ![图片说明](图片地址) ，地址可以是本地路劲，也可以是网络地址<br>列表 * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格</p>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p># 欢迎使用Markdown编辑器写博客    //一级标题 对应 &#60;h1&#62; &#60;/h1\&#62;<br>## 标题输入                     //二级标题 对应 &#60;h2&#62; &#60;/h2&#62;<br>### 三级标题                    //三级标题 对应 &#60;h3&#62; &#60;/h3&#62;<br>#### 四级标题                   //四级标题 对应 &#60;h4&#62; &#60;/h4&#62;<br>##### 五级标题                  //五级标题 对应 &#60;h5&#62; &#60;/h5&#62;<br>###### 六级标题                 //六级标题 对应 &#60;h6&#62; &#60;/h6&#62;<br>####### 七级标题                //抱歉，木有了（但是他会影响生成的目录，目录行多出一行空行）</p>
+<h1 id="内容强调"><a href="#内容强调" class="headerlink" title="内容强调"></a>内容强调</h1><h2 id="加粗、斜体"><a href="#加粗、斜体" class="headerlink" title="加粗、斜体"></a>加粗、斜体</h2><p>字体 **加粗** 显示<br>字体 *斜体* 显示<br>字体 ***加粗并斜体*** 显示</p>
+<p>字体 <strong>加粗</strong> 显示<br>字体 <em>斜体</em> 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示</p>
+<p>字体 __加粗__ 显示<br>字体 _斜体_ 显示<br>字体 ___加粗并斜体___ 显示<br>组合 *__加粗并斜体__* 显示</p>
+<p>字体 <strong>加粗</strong> 显示<br>字体 _斜体_ 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示<br>组合 <em><strong>加粗并斜体</strong></em> 显示</p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>这样来 ~~删除一段文本~~</p>
+<p>这样来 <del>删除一段文本</del></p>
+<h1 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h1><p>使用<code>`</code>来强调字符   //想打出  <code>`</code> (反引号)需要转义的，加&#60;code&#62;&#60;/code&#62;标签强调<br>比如<code>`突出背景色`</code>来显示强调效果<br>上面的效果其实是这么实现的 `` `突出背景色` ``</p>
+<h1 id="引用显示"><a href="#引用显示" class="headerlink" title="引用显示"></a>引用显示</h1><p>引用过程中任然支持<code>Markdown</code>语法！</p>
+<p>标准使用<br>> 每行开始都使用 ‘>‘；<br>> 引用<strong>开始</strong>；<br>> 引用<strong>换行</strong>；<br>> 引用<strong>结束</strong>。</p>
+<p>> 还在引用中！</p>
+<p>两个回车结束引用！</p>
+<blockquote>
+<p>每行开始都使用 ‘&gt;’；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>。</p>
+</blockquote>
+<blockquote>
+<p>还在引用中！</p>
+</blockquote>
+<p><code>两个回车</code>结束引用！</p>
+<h1 id="省略使用"><a href="#省略使用" class="headerlink" title="省略使用"></a>省略使用</h1><p>> 仅第一行加引用；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>；</p>
+<p>两个回车结束引用,不在引用范围内了！</p>
+<blockquote>
+<p>仅第一行加引用；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>；</p>
+</blockquote>
+<p><code>两个回车</code>结束引用,不在引用范围内了！</p>
+<h1 id="嵌套使用"><a href="#嵌套使用" class="headerlink" title="嵌套使用"></a>嵌套使用</h1><p>> 动物<br>>> 水生动物<br>>> 陆生动物<br>>>> 猴子<br>>>> 人<br>>>>> 程序猿<br>>>>> 攻城狮<br>>>产品狗 //这里需要注意，没有空行间隔，忽略降级引用标记<br>射鸡虱   //这里需要注意，没有空行间隔，忽略降级引用标记</p>
+<p>>> 两栖类动物<br>>>> 大鳄鱼<br>唐老鸭</p>
+<p><code>两个回车</code>结束引用,不在引用范围内了！</p>
+<blockquote>
+<p>动物</p>
+<blockquote>
+<p>水生动物<br>陆生动物</p>
+<blockquote>
+<p>猴子<br>人</p>
+<blockquote>
+<p>程序猿<br>攻城狮<br>产品狗 //没有空行间隔，忽略降级引用标记<br>射鸡虱   //没有空行间隔，忽略降级引用标记</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>两栖类动物</p>
+<blockquote>
+<p>大鳄鱼<br>唐老鸭</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><code>两个回车</code>结束引用,不在引用范围内了！</p>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><h2 id="表格语法："><a href="#表格语法：" class="headerlink" title="表格语法："></a>表格语法：</h2><p>列1   | 列2 | 列3<br>----- | ---| ----<br>第1行 | 12  | 13<br>第2行 | 22  | 23<br>第3行 | 32  | 33  </p>
+<table>
+<thead>
+<tr>
+<th>列1</th>
+<th>列2</th>
+<th>列3 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1行</td>
+<td>12</td>
+<td>13  </td>
+</tr>
+<tr>
+<td>第2行</td>
+<td>22</td>
+<td>23  </td>
+</tr>
+<tr>
+<td>第3行</td>
+<td>32</td>
+<td>33  </td>
+</tr>
+</tbody>
+</table>
+<h2 id="可以使用冒号来定义对齐方式："><a href="#可以使用冒号来定义对齐方式：" class="headerlink" title="可以使用冒号来定义对齐方式："></a>可以使用冒号来定义对齐方式：</h2><p>| 左对齐    |  右对齐 | 居中 |<br>| :——– | ——-:| :–: |<br>| Computer  | 5000 元 |  1台 |<br>| Phone     | 1999 元 |  1部 |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:right">右对齐</th>
+<th style="text-align:center">居中</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Computer</td>
+<td style="text-align:right">5000 元</td>
+<td style="text-align:center">1台</td>
+</tr>
+<tr>
+<td style="text-align:left">Phone</td>
+<td style="text-align:right">1999 元</td>
+<td style="text-align:center">1部</td>
+</tr>
+</tbody>
+</table>
+<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><p>代码块语法遵循标准 <code>markdown</code> 代码，使用```开始，```结束 例如：</p>
+<p>```Python<br>#!/usr/bin/env python<br># -<em>- coding: utf-8 -</em>-<br>print ‘Hello World!<br> ```</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Hello World!</span></span><br></pre></td></tr></table></figure>
+<p> 如何在代码块中打出 ```<br> 实际上是使用 4个` 包含 3个` 就可以了，想表示更多，最外层+1就好了。<br> ````<br> ```<br> ```<br> ````   </p>
+<h1 id="链接插入"><a href="#链接插入" class="headerlink" title="链接插入"></a>链接插入</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[首页](http://zhuzhuyule.xyz)</span><br><span class="line">[我的信息](/about/)</span><br><span class="line">[纪念册](https://love.zhuzhuyule.xyz/)</span><br></pre></td></tr></table></figure>
+<p> <a href="http://zhuzhuyule.xyz" target="_blank" rel="noopener">首页</a><br> <a href="/about/">我的信息</a><br> <a href="https://love.zhuzhuyule.xyz/" target="_blank" rel="noopener">纪念册</a>  </p>
+<h1 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h1> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> ![图片alt](图片地址 &quot;图片title&quot;)  </span><br><span class="line"> 图片alt就是显示在图片下面的文字，相当于对图片内容的解释。 </span><br><span class="line"> 图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加  </span><br><span class="line">![我的头像](http://zhuzhuyule.xyz/images/avatar.png)  </span><br><span class="line">![我的头像](/images/avatar.png)</span><br></pre></td></tr></table></figure>
+<p> <img src="http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png" alt="我的头像"><br> <img src="/2018/11/15/hexo-github搭建博客2-语法入门/PerfectTime.png" alt="我的头像">    </p>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p> * *列表展示<br> * *列表展示<br>    * *列表展示<br> + +列表展示<br> + +列表展示<br>    + +列表展示<br> - -列表展示<br> - -列表展示<br>    - -列表展示</p>
+<ul>
+<li>*列表展示</li>
+<li>*列表展示<ul>
+<li>*列表展示</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>+列表展示</li>
+<li>+列表展示<ul>
+<li>+列表展示</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>-列表展示</li>
+<li><p>-列表展示</p>
+<ul>
+<li>-列表展示  </li>
+</ul>
+<h2 id="有序列表-数字加点-二级序列-3个空格"><a href="#有序列表-数字加点-二级序列-3个空格" class="headerlink" title="有序列表   数字加点    二级序列 3个空格"></a>有序列表   数字加点    二级序列 3个空格</h2></li>
+</ul>
+<p>这种方式不用手动设置序号，自动生成列表序列</p>
+<ol>
+<li><strong>我是一级序列</strong> </li>
+<li><strong>我是一级序列</strong> </li>
+<li><strong>我是一级序列</strong> <ol>
+<li><em>我是二级序列</em> </li>
+<li><em>我是二级序列</em> </li>
+<li><em>我是二级序列</em> </li>
+</ol>
+</li>
+<li><strong>我是一级序列</strong> </li>
+<li><strong>我是一级序列</strong> <ol>
+<li><em>我是二级序列</em> </li>
+<li><em>我是二级序列</em> </li>
+<li><em>我是二级序列</em> <ol>
+<li><em>我是三级序列</em>  </li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>#链接自动检测  </p>
+<p>[超链接名](超链接地址 “超链接title”)<br>title可加可不加</p>
+<p> 首页:<a href="http://zhuzhuyule.xyz" target="_blank" rel="noopener">http://zhuzhuyule.xyz</a><br> 我的信息:<a href="http://zhuzhuyule.xyz/about/" target="_blank" rel="noopener">http://zhuzhuyule.xyz/about/</a><br> 纪念册:<a href="https://love.zhuzhuyule.xyz/" target="_blank" rel="noopener">https://love.zhuzhuyule.xyz/</a></p>
+<hr>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>  三个或者三个以上的 - 或者 * 都可以。  </p>
+<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a><a href="https://www.jianshu.com/p/b03a8d7b1719" title="详细。。" target="_blank" rel="noopener">流程图</a></h1>
+        
+    </article>
+    <footer class="cube-excerpt-footer">
+        <a class="cube-excerpt-more" href="/2018/11/15/hexo-github搭建博客2-语法入门/">阅读全文</a>
+    </footer>
+</div>
+
+<div class="cube-excerpt" id="cube-excerpt-hexo-github搭建博客1-小试牛刀">
+    <header class="cube-excerpt-header">
+        <h1><a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/">hexo-github搭建博客1-小试牛刀</a></h1>
+        <div class="cube-excerpt-header-msg">
+            <div class="cube-excerpt-date">
+                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+                2018-11-14
+            </div>
+            <div class="cube-excerpt-tags">
+                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+                
+                <a href="/tags/hexo/" class="cube-excerpt-tag-link">#hexo</a>
+                
+            </div>
+        </div>
+    </header>
+    <article class="cube-excerpt-entry cube-markdown">
+        
+        
+           <h2 id="一、准备环境："><a href="#一、准备环境：" class="headerlink" title="一、准备环境："></a>一、准备环境：</h2><h4 id="1、安装Node-js环境；"><a href="#1、安装Node-js环境；" class="headerlink" title="1、安装Node.js环境；"></a>1、安装Node.js环境；</h4><h4 id="2、安装Git环境，主要是用于直接同步生成的博客；"><a href="#2、安装Git环境，主要是用于直接同步生成的博客；" class="headerlink" title="2、安装Git环境，主要是用于直接同步生成的博客；"></a>2、安装Git环境，主要是用于直接同步生成的博客；</h4><h4 id="3、通过npm安装Hexo"><a href="#3、通过npm安装Hexo" class="headerlink" title="3、通过npm安装Hexo"></a>3、通过npm安装Hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入npm install hexo -g，开始安装Hexo</span><br><span class="line">输入hexo -v，检查hexo是否安装成功</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="二、初始化blog："><a href="#二、初始化blog：" class="headerlink" title="二、初始化blog："></a>二、初始化blog：</h2><h4 id="1、新建blog文件夹"><a href="#1、新建blog文件夹" class="headerlink" title="1、新建blog文件夹"></a>1、新建blog文件夹</h4><h4 id="2、通过Hexo初始化blog"><a href="#2、通过Hexo初始化blog" class="headerlink" title="2、通过Hexo初始化blog"></a>2、通过Hexo初始化blog</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入blog文件夹</span><br><span class="line">输入hexo init，初始化该文件夹</span><br><span class="line">输入npm install，安装所需要的组件</span><br><span class="line">输入hexo g，生成blog发布文件</span><br><span class="line">输入hexo s，开启服务器</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="三、关联Githb并推送"><a href="#三、关联Githb并推送" class="headerlink" title="三、关联Githb并推送"></a>三、关联Githb并推送</h2><h4 id="1、创建Github账号"><a href="#1、创建Github账号" class="headerlink" title="1、创建Github账号"></a>1、创建Github账号</h4><h4 id="2、创建仓库，-仓库名为：-lt-Github账号名称-gt-github-io"><a href="#2、创建仓库，-仓库名为：-lt-Github账号名称-gt-github-io" class="headerlink" title="2、创建仓库， 仓库名为：&lt;Github账号名称&gt;.github.io"></a>2、创建仓库， 仓库名为：&lt;Github账号名称&gt;.github.io</h4><pre><code>github repositories  Settings
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">repositories name : sumnear.github.io</span><br><span class="line">Custom domain 设置自己的域名 sumnear.top</span><br></pre></td></tr></table></figure>
+<h4 id="3、将本地Hexo博客推送到GithubPages"><a href="#3、将本地Hexo博客推送到GithubPages" class="headerlink" title="3、将本地Hexo博客推送到GithubPages"></a>3、将本地Hexo博客推送到GithubPages</h4><p> <strong>3.1  安装hexo-deployer-git插件。在命令行（即Git Bash）运行以下命令即可：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>  <strong>3.2   修改_config.yml（在站点目录下）。文件末尾修改为：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p><strong>3.3 设置Git的user name和email</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;sumnear&quot;</span><br><span class="line">git config --global user.email &quot;402347012@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p><strong>3.4 hexo把blog内容推送到github上</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d   </span><br></pre></td></tr></table></figure></p>
+
+        
+    </article>
+    <footer class="cube-excerpt-footer">
+        <a class="cube-excerpt-more" href="/2018/11/14/hexo-github搭建博客1-小试牛刀/">阅读全文</a>
+    </footer>
+</div>
+
+
+
+<ul class="cube-pagination cube-pagination-6">
+    
+    <li class="cube-pagination-prev disabled">
+        <span>« 上一页</span>
+    </li>
+    
+    
+        
+            
+            <li class="cube-pagination-index disabled">
+                <span>1</span>
+            </li>
+            
+        
+    
+
+    
+    <li class="cube-pagination-next disabled">
+        <span>下一页 »</span>
+    </li>
+    
+</ul>
+
+<!--其他组件后续添加-->
+        </div>
+        <div class="cube-right">
+            
+
+<div class="cube-search cube-sidebar" id="cube-search">
+    <div class="search-container">
+        <input type="text" placeholder="搜索" class="cube-search-input" id="cube-search-input">
+        <i class="cube-icon cube-icon-search cube-search-submit" aria-hidden="true"></i>
+    </div>
+    <!-- TODO 通过给window赋一个全局变量，通过脚本赋值 -->
+</div>
+<script>
+    (function (window) {
+        'use strict';
+        window.searchModule = {}
+        window.searchModule.JSONUrl = '/content.json'
+        window.searchModule.rootUrl = '/'
+    })(window)
+</script>
+<div class="cube-search-form">
+    <div class="cube-search-control">
+        <input type="text" placeholder="搜索" class="search-input">
+        <a class="close-button">
+            <i class="cube-icon cube-close" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="cube-search-result"></div>
+</div>
+
+
+<div class="cube-author cube-sidebar" id="cube-author">
+    
+    
+    <span>Sumnear</span>
+    
+    
+    <a title="SEARCH FOR MY ONE PIECE">SEARCH FOR MY ONE PIECE</a>
+    
+    <div class="count">
+        <a class="count articles"><span>3</span>文章</a>
+        <a class="count tags"><span>2</span>标签</a>
+        <a class="count categories"><span>1</span>分类</a>
+    </div>
+</div>
+
+
+
+<div class="cube-music cube-sidebar" id="cube-music">
+    <div class="cube-player aplayer" id="cube-player"></div>
+</div>
+<script>
+    (function (window) {
+        window.musicModule = {}
+        window.musicModule.musicConfig = '{"narrow":false,"autoplay":false,"showlrc":0,"theme":"#b7daff","mutex":true,"mode":"circulation","preload":"auto","listmaxheight":"513px","music":[{"title":"PerfectTime","author":"泽野弘之","url":"https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.mp3","pic":"http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png"},{"title":"はるかな旅","author":"吉田洁","url":"https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/はるかな旅.mp3","pic":"http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png"},{"title":"春风再美也比不上你的笑，没见过你的人自然不会明了","author":"十指流玉","url":"https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/春风再美也比不上你的笑，没见过你的人自然不会明了.mp3","pic":"http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png"}]}'
+        window.musicModule.lrcConfig = {
+            open: '开启歌词',
+            close: '关闭歌词'
+        }
+    })(window)
+</script>
+
+
+
+<div class="cube-recent-posts cube-sidebar" id="cube-recent-posts">
+    <div class="title">
+        <a>近期文章</a>
+    </div>
+    <ul class="list">
+        
+        
+        <li>
+            <!-- TODO 如果文章要显示图片，那么在front-matter上添加preview属性(url or path) -->
+            
+            <div class="normal">
+                <p class="index first">
+                    <span>1</span>
+                </p>
+                <p class="title">
+                    <a href="/2018/11/17/hexo-github搭建博客3-问题整理/" title="hexo-github搭建博客3-问题整理">hexo-github搭建博客3-问题整理</a>
+                </p>
+            </div>
+            
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>2</span>
+                </p>
+                <p class="title">
+                    <a href="/2018/11/15/hexo-github搭建博客2-语法入门/" title="hexo-github搭建博客2-语法入门">hexo-github搭建博客2-语法入门</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>3</span>
+                </p>
+                <p class="title">
+                    <a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/" title="hexo-github搭建博客1-小试牛刀">hexo-github搭建博客1-小试牛刀</a>
+                </p>
+            </div>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+
+<div class="cube-categories cube-sidebar" id="cube-categories">
+    <div class="title">
+        <a href="/categories">分类</a>
+    </div>
+    <div class="cube-boxs">
+        
+        
+        <div class="cube-box ">
+            <a href="/categories/hexo/">#hexo</a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="cube-tagcloud cube-sidebar" id="cube-tagcloud">
+    <div class="title">
+        <a href="/tags">标签云</a>
+    </div>
+    <div class="cube-boxs">
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/hexo-markdown/">#hexo  markdown</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/hexo/">#hexo</a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="cube-links cube-sidebar" id="cube-links">
+    <div class="title">
+        <a>个人链接</a>
+    </div>
+    <ul class="list">
+        
+        <li>
+            
+            
+            <img src="https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/GitHub.png">
+            
+            <a href="https://github.com/sumnear" target="_blank">GitHub</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/mayun.jpg">
+            
+            <a href="https://gitee.com/SumTeam" target="_blank">gitee</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="https://raw.githubusercontent.com/sumnear/blog/master/httpFiles/wangyiyun.jpg">
+            
+            <a href="https://music.163.com/#/user/home?id=109182388" target="_blank">网易云</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+<div class="cube-friend-links cube-sidebar" id="cube-friend-links">
+    <div class="title">
+        <a>友情链接</a>
+    </div>
+    <ul class="list">
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/friend_links/micblo.png">
+            <a href="https://blog.micblo.com/" target="_blank">罗大佬</a>
+        </li>
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/friend_links/DIYgod.jpg">
+            <a href="https://www.anotherhome.net/" target="_blank">DIYgod</a>
+        </li>
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="/images/friend_links.jpg ">
+            <a href="https://aonosora.com/" target="_blank">咪西西の部落格</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+    </div>
+</div>
+<footer class="cube-footer">
+    
+© 2017 Sumnear
+
+<br>
+Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+</footer>
+<!-- inject:script -->
+<script src="/js/script.js"></script>
+<!-- endinject -->
+<div class="cube-loading out"></div>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":1.5,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-40},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.8,"opacityOnHover":0.2}});</script></body>
+</html>
