@@ -14,7 +14,7 @@
     
     <title>标签: hexo | Sumnear&#39;s coding life</title>
     <!-- inject:style -->
-    <link href="/blog/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
     <style>
         .cube-loading {
@@ -22,7 +22,7 @@
             position: fixed;
             width: 100%;
             height: 100%;
-            background: url('/blog/images/lg/loading.gif') no-repeat center center;
+            background: url('/images/lg/loading.gif') no-repeat center center;
             background-color: rgba(0,0,0,.7);
         }
 
@@ -70,7 +70,7 @@
     
 </head></html>
 <body>
-<div class="cube-body" style="background-image: url(./images/background.png);  background-attachment: inherit;
+<div class="cube-body" style="background-image: url(/images/background.png);  background-attachment: inherit;
 background-repeat: repeat-y;background-size: 1920px;
                                   background-position: center;">
     <nav id="cube-top-memu" class="cube-menu">
@@ -78,27 +78,27 @@ background-repeat: repeat-y;background-size: 1920px;
         
         <li>
             <i class="cube-icon cube-icon-home" aria-hidden="true"></i>
-            <a href="/blog/">首页</a>
+            <a href="/">首页</a>
         </li>
         
         <li>
             <i class="cube-icon cube-icon-archive" aria-hidden="true"></i>
-            <a href="/blog/archives">归档</a>
+            <a href="/archives">归档</a>
         </li>
         
         <li>
             <i class="cube-icon cube-icon-categories" aria-hidden="true"></i>
-            <a href="/blog/categories">分类</a>
+            <a href="/categories">分类</a>
         </li>
         
         <li>
             <i class="cube-icon cube-icon-tags" aria-hidden="true"></i>
-            <a href="/blog/tags">标签</a>
+            <a href="/tags">标签</a>
         </li>
         
         <li>
             <i class="cube-icon cube-icon-about" aria-hidden="true"></i>
-            <a href="/blog/about-me">关于我</a>
+            <a href="/about-me">关于我</a>
         </li>
         
     </ul>
@@ -190,11 +190,11 @@ background-repeat: repeat-y;background-size: 1920px;
         <ul class="posts">
             
             <li class="post">
-                <a href="/blog/2018/11/15/hexo-github搭建博客2-语法入门/">hexo-github搭建博客2-语法入门</a>
+                <a href="/2018/11/15/hexo-github搭建博客2-语法入门/">hexo-github搭建博客2-语法入门</a>
             </li>
             
             <li class="post">
-                <a href="/blog/2018/11/14/hexo-github搭建博客1-小试牛刀/">hexo-github搭建博客1-小试牛刀</a>
+                <a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/">hexo-github搭建博客1-小试牛刀</a>
             </li>
             
         </ul>
@@ -217,8 +217,8 @@ background-repeat: repeat-y;background-size: 1920px;
     (function (window) {
         'use strict';
         window.searchModule = {}
-        window.searchModule.JSONUrl = '/blog/content.json'
-        window.searchModule.rootUrl = '/blog/'
+        window.searchModule.JSONUrl = '/content.json'
+        window.searchModule.rootUrl = '/'
     })(window)
 </script>
 <div class="cube-search-form">
@@ -280,7 +280,7 @@ background-repeat: repeat-y;background-size: 1920px;
                     <span>1</span>
                 </p>
                 <p class="title">
-                    <a href="/blog/2018/11/17/hexo-github搭建博客3-问题整理/" title="hexo-github搭建博客3-问题整理">hexo-github搭建博客3-问题整理</a>
+                    <a href="/2018/11/17/hexo-github搭建博客3-问题整理/" title="hexo-github搭建博客3-问题整理">hexo-github搭建博客3-问题整理</a>
                 </p>
             </div>
             
@@ -294,7 +294,7 @@ background-repeat: repeat-y;background-size: 1920px;
                     <span>2</span>
                 </p>
                 <p class="title">
-                    <a href="/blog/2018/11/15/hexo-github搭建博客2-语法入门/" title="hexo-github搭建博客2-语法入门">hexo-github搭建博客2-语法入门</a>
+                    <a href="/2018/11/15/hexo-github搭建博客2-语法入门/" title="hexo-github搭建博客2-语法入门">hexo-github搭建博客2-语法入门</a>
                 </p>
             </div>
         </li>
@@ -307,7 +307,7 @@ background-repeat: repeat-y;background-size: 1920px;
                     <span>3</span>
                 </p>
                 <p class="title">
-                    <a href="/blog/2018/11/14/hexo-github搭建博客1-小试牛刀/" title="hexo-github搭建博客1-小试牛刀">hexo-github搭建博客1-小试牛刀</a>
+                    <a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/" title="hexo-github搭建博客1-小试牛刀">hexo-github搭建博客1-小试牛刀</a>
                 </p>
             </div>
         </li>
@@ -320,13 +320,13 @@ background-repeat: repeat-y;background-size: 1920px;
 
 <div class="cube-categories cube-sidebar" id="cube-categories">
     <div class="title">
-        <a href="/blog/categories">分类</a>
+        <a href="/categories">分类</a>
     </div>
     <div class="cube-boxs">
         
         
-        <div class="cube-box ">
-            <a href="/blog/categories/hexo/">#hexo</a>
+        <div class="cube-box-bg ">
+            <a href="/categories/hexo/">#hexo</a>
         </div>
         
     </div>
@@ -336,18 +336,18 @@ background-repeat: repeat-y;background-size: 1920px;
 
 <div class="cube-tagcloud cube-sidebar" id="cube-tagcloud">
     <div class="title">
-        <a href="/blog/tags">标签云</a>
+        <a href="/tags">标签云</a>
     </div>
     <div class="cube-boxs">
         
         
         <div class="cube-box-bg ">
-            <a href="/blog/tags/hexo/">#hexo</a>
+            <a href="/tags/hexo/">#hexo</a>
         </div>
         
         
         <div class="cube-box ">
-            <a href="/blog/tags/markdown/">#markdown</a>
+            <a href="/tags/markdown/">#markdown</a>
         </div>
         
     </div>
@@ -398,7 +398,7 @@ background-repeat: repeat-y;background-size: 1920px;
         
         <li>
             <!-- TODO change avatar.png to friend.png-->
-            <img src="/blog/images/friend_links.jpg ">
+            <img src="/images/friend_links.jpg ">
             <a href="http://ZEROKISEKI.github.io" target="_blank">主题作者</a>
         </li>
         
@@ -423,8 +423,8 @@ background-repeat: repeat-y;background-size: 1920px;
 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
 </footer>
 <!-- inject:script -->
-<script src="/blog/js/script.js"></script>
+<script src="/js/script.js"></script>
 <!-- endinject -->
 <div class="cube-loading out"></div>
-<script src="/blog/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/blog/live2dw/assets/z16.model.json"},"display":{"superSample":1.5,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-40},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.8,"opacityOnHover":0.2}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":1.5,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-40},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.8,"opacityOnHover":0.2}});</script></body>
 </html>
