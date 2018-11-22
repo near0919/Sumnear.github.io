@@ -176,6 +176,113 @@ background-repeat: repeat-y;background-size: 1920px;
     <div class="cube-content" style="opacity:0.9">
         <div class="cube-left">
             
+<div class="cube-excerpt" id="cube-excerpt-设计模式02里氏替换原则">
+    <header class="cube-excerpt-header">
+        <h1><a href="/2018/11/22/设计模式02里氏替换原则/">设计模式02里氏替换原则</a></h1>
+        <div class="cube-excerpt-header-msg">
+            <div class="cube-excerpt-date">
+                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+                2018-11-22
+            </div>
+            <div class="cube-excerpt-tags">
+                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+                
+                <a href="/tags/设计模式/" class="cube-excerpt-tag-link">#设计模式</a>
+                
+                <a href="/tags/六大原则/" class="cube-excerpt-tag-link">#六大原则</a>
+                
+            </div>
+        </div>
+    </header>
+    <article class="cube-excerpt-entry cube-markdown">
+        
+        
+           <h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><h2 id="Liskov-Substitution-Principle"><a href="#Liskov-Substitution-Principle" class="headerlink" title="Liskov Substitution Principle"></a>Liskov Substitution Principle</h2><p>If for each object o1 of type S there is an object o2 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T.</p>
+<p>如果对每一个类型为S的对象o1，都有类型为T的对象o2，使得以T定义的所有程序P在所有的对象o1都代换成o2时，程序P的行为没有发生变化，那么类型S是类型T的子类型。</p>
+<p>Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.<br>所有引用基类的地方必须能透明的使用其子类的对象。</p>
+<p>通俗点讲，只要父类能出现的地方子类就能出现，而且替换为子类也不会产生任何错误或异常；反过来就不行，有子类的地方父类未必能适应。</p>
+<p>4层含义：</p>
+<ol>
+<li>子类必须完全实现父类的方法；</li>
+<li>子类可以有自己的个性；</li>
+<li>覆盖或实现父类的方法时输入参数可以被放大；</li>
+<li>覆写或实现父类的方法时输出结果可以被缩小； </li>
+</ol>
+<p>先看个问题版本</p>
+<pre><code>public class Father {
+    public Collection doSomething(Map map){
+        System.out.println(&quot;父类被执行...&quot;);        
+        return map.values();
+    }
+}
+
+public class Son extends Father {
+    //缩小输入参数范围
+    public Collection doSomething(HashMap map){
+        System.out.println(&quot;子类被执行...&quot;);
+        return map.values();
+    }
+} 
+
+public class Client
+{
+    public static void invoker()
+    {
+        //有父类的地方就有子类
+        Father f1 = new Father();
+        Son s1 = new Son();
+        HashMap map = new HashMap();
+        f1.doSomething(map);    //父类被执行
+        s1.doSomething(map);   //子类被执行
+    }
+
+    public static void main(String[] args)
+    {
+        invoker();
+    }
+}
+</code></pre><p><code>注意看上面子类重载父类方法时候的入参，子类s1替换父类f1导致输出结果发生了变化。</code></p>
+<pre><code>public class Father {
+    public Collection doSomething(HashMap map){
+        System.out.println(&quot;父类被执行...&quot;);        
+        return map.values();
+    }
+} 
+
+public class Son extends Father {
+    //放大输入参数类型
+    public Collection doSomething(Map map){
+        System.out.println(&quot;子类被执行...&quot;);
+        return map.values();
+    }
+} 
+
+public class Client
+{
+    public static void invoker()
+    {
+        //有父类的地方就有子类
+        Father f1 = new Father();
+        Son s1 = new Son();
+        HashMap map = new HashMap();
+        f1.doSomething(map);    //父类被执行
+        s1.doSomething(map);   //父类被执行
+    }
+    public static void main(String[] args)
+    {
+        invoker();
+    }
+}
+</code></pre><p><code>子类s1替换父类f1输出结果还是一样。</code></p>
+<p><code>说白了就是子类重载父类方法时，入参的范围要大于父类，这样在子类替换父类的时候，JAVA会根据入参，将方法绑定到父类方法上。</code></p>
+
+        
+    </article>
+    <footer class="cube-excerpt-footer">
+        <a class="cube-excerpt-more" href="/2018/11/22/设计模式02里氏替换原则/">阅读全文</a>
+    </footer>
+</div>
+
 <div class="cube-excerpt" id="cube-excerpt-设计模式01单一职责原则">
     <header class="cube-excerpt-header">
         <h1><a href="/2018/11/21/设计模式01单一职责原则/">设计模式01单一职责原则</a></h1>
@@ -266,7 +373,7 @@ background-repeat: repeat-y;background-size: 1920px;
     public String getUserName();
 }
 </code></pre><p>优点：<br>1、类的复杂性降低，实现什么职责都有清晰明确的定义；<br>2、可读性提高、复杂性降低；<br>3、可维护性提高；<br>4、变更引起的风险降低，变更是必不可少的，如果接口的单一职责做得好，一个接口修改只对相应的实现类有影响，对其他的接口无影响，这对系统的扩展性、维护性都有非常大的帮助。  </p>
-<p>有时候这个单一职责原则是很难界定的，就比如 A给B转账 接口， 这个功能从事务的角度去看是最小颗粒度，但是实际上又包含 账户扣钱 和 账户涨钱 这2个接口； 账户金额修改这个功能又能分<br>活期余额和定期余额。所以在实际开发中，需要做的就是根据自己的理解去把握这个单一职责的度，心里要有这个概念。</p>
+<p>有时候这个单一职责原则是很难界定的，就比如 A给B转账 接口， 这个功能从事务的角度去看是最小颗粒度，但是实际上又包含 账户扣钱 和 账户涨钱 这2个接口； 账户金额修改这个功能又能分活期余额和定期余额。所以在实际开发中，需要做的就是根据自己的理解去把握这个单一职责的度，心里要有这个概念。</p>
 
         
     </article>
@@ -622,7 +729,7 @@ background-repeat: repeat-y;background-size: 1920px;
     <a title="人间如梦，一樽还酹江月。">人间如梦，一樽还酹江月。</a>
     
     <div class="count">
-        <a class="count articles"><span>4</span>文章</a>
+        <a class="count articles"><span>5</span>文章</a>
         <a class="count tags"><span>4</span>标签</a>
         <a class="count categories"><span>2</span>分类</a>
     </div>
@@ -661,7 +768,7 @@ background-repeat: repeat-y;background-size: 1920px;
                     <span>1</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/11/21/设计模式01单一职责原则/" title="设计模式01单一职责原则">设计模式01单一职责原则</a>
+                    <a href="/2018/11/22/设计模式02里氏替换原则/" title="设计模式02里氏替换原则">设计模式02里氏替换原则</a>
                 </p>
             </div>
             
@@ -675,7 +782,7 @@ background-repeat: repeat-y;background-size: 1920px;
                     <span>2</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/11/17/hexo-github搭建博客3-问题整理/" title="hexo-github搭建博客3-问题整理">hexo-github搭建博客3-问题整理</a>
+                    <a href="/2018/11/21/设计模式01单一职责原则/" title="设计模式01单一职责原则">设计模式01单一职责原则</a>
                 </p>
             </div>
         </li>
@@ -688,7 +795,7 @@ background-repeat: repeat-y;background-size: 1920px;
                     <span>3</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/11/15/hexo-github搭建博客2-语法入门/" title="hexo-github搭建博客2-语法入门">hexo-github搭建博客2-语法入门</a>
+                    <a href="/2018/11/17/hexo-github搭建博客3-问题整理/" title="hexo-github搭建博客3-问题整理">hexo-github搭建博客3-问题整理</a>
                 </p>
             </div>
         </li>
@@ -699,6 +806,19 @@ background-repeat: repeat-y;background-size: 1920px;
             <div class="normal">
                 <p class="index">
                     <span>4</span>
+                </p>
+                <p class="title">
+                    <a href="/2018/11/15/hexo-github搭建博客2-语法入门/" title="hexo-github搭建博客2-语法入门">hexo-github搭建博客2-语法入门</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>5</span>
                 </p>
                 <p class="title">
                     <a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/" title="hexo-github搭建博客1-小试牛刀">hexo-github搭建博客1-小试牛刀</a>
@@ -719,7 +839,7 @@ background-repeat: repeat-y;background-size: 1920px;
     <div class="cube-boxs">
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/categories/hexo/">#hexo</a>
         </div>
         

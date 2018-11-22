@@ -12,7 +12,7 @@
     
     
     
-    <title>categories | Sumnear&#39;s coding life</title>
+    <title>设计模式02里氏替换原则 | Sumnear&#39;s coding life</title>
     <!-- inject:style -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
@@ -175,96 +175,128 @@ background-repeat: repeat-y;background-size: 1920px;
     
     <div class="cube-content" style="opacity:0.9">
         <div class="cube-left">
-            <div class="cube-boxs">
+            <div class="cube-article">
+    <h1 class="title">设计模式02里氏替换原则</h1>
     
+    <div class="cube-article-header">
+        <div class="cube-article-date">
+            <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+            <!-- moment.js对象 -->
+            2018-11-22
+        </div>
+        <div class="cube-article-tags">
+    <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
     
-    <div class="cube-box ">
-        <a href="/tags/hexo/">hexo</a>
-    </div>
+    <a href="/tags/设计模式/">#设计模式</a>
     
-    
-    <div class="cube-box ">
-        <a href="/tags/markdown/">markdown</a>
-    </div>
-    
-    
-    <div class="cube-box ">
-        <a href="/tags/设计模式/">设计模式</a>
-    </div>
-    
-    
-    <div class="cube-box ">
-        <a href="/tags/六大原则/">六大原则</a>
-    </div>
+    <a href="/tags/六大原则/">#六大原则</a>
     
 </div>
-<div class="cube-archives">
+    </div>
     
-        <div class="cube-archive">
-            <h1 class="title">hexo</h1>
-            
-            <ul class="posts">
-                
-                <li class="post">
-                    <a href="/2018/11/15/hexo-github搭建博客2-语法入门/">hexo-github搭建博客2-语法入门</a>
-                </li>
-                
-                <li class="post">
-                    <a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/">hexo-github搭建博客1-小试牛刀</a>
-                </li>
-                
-            </ul>
-            
-        </div>
-    
-        <div class="cube-archive">
-            <h1 class="title">markdown</h1>
-            
-            <ul class="posts">
-                
-                <li class="post">
-                    <a href="/2018/11/15/hexo-github搭建博客2-语法入门/">hexo-github搭建博客2-语法入门</a>
-                </li>
-                
-            </ul>
-            
-        </div>
-    
-        <div class="cube-archive">
-            <h1 class="title">设计模式</h1>
-            
-            <ul class="posts">
-                
-                <li class="post">
-                    <a href="/2018/11/22/设计模式02里氏替换原则/">设计模式02里氏替换原则</a>
-                </li>
-                
-                <li class="post">
-                    <a href="/2018/11/21/设计模式01单一职责原则/">设计模式01单一职责原则</a>
-                </li>
-                
-            </ul>
-            
-        </div>
-    
-        <div class="cube-archive">
-            <h1 class="title">六大原则</h1>
-            
-            <ul class="posts">
-                
-                <li class="post">
-                    <a href="/2018/11/22/设计模式02里氏替换原则/">设计模式02里氏替换原则</a>
-                </li>
-                
-                <li class="post">
-                    <a href="/2018/11/21/设计模式01单一职责原则/">设计模式01单一职责原则</a>
-                </li>
-                
-            </ul>
-            
-        </div>
-    
+    <div class="cube-article-content cube-markdown">
+        
+        <h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><h2 id="Liskov-Substitution-Principle"><a href="#Liskov-Substitution-Principle" class="headerlink" title="Liskov Substitution Principle"></a>Liskov Substitution Principle</h2><p>If for each object o1 of type S there is an object o2 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T.</p>
+<p>如果对每一个类型为S的对象o1，都有类型为T的对象o2，使得以T定义的所有程序P在所有的对象o1都代换成o2时，程序P的行为没有发生变化，那么类型S是类型T的子类型。</p>
+<p>Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.<br>所有引用基类的地方必须能透明的使用其子类的对象。</p>
+<p>通俗点讲，只要父类能出现的地方子类就能出现，而且替换为子类也不会产生任何错误或异常；反过来就不行，有子类的地方父类未必能适应。</p>
+<p>4层含义：</p>
+<ol>
+<li>子类必须完全实现父类的方法；</li>
+<li>子类可以有自己的个性；</li>
+<li>覆盖或实现父类的方法时输入参数可以被放大；</li>
+<li>覆写或实现父类的方法时输出结果可以被缩小； </li>
+</ol>
+<p>先看个问题版本</p>
+<pre><code>public class Father {
+    public Collection doSomething(Map map){
+        System.out.println(&quot;父类被执行...&quot;);        
+        return map.values();
+    }
+}
+
+public class Son extends Father {
+    //缩小输入参数范围
+    public Collection doSomething(HashMap map){
+        System.out.println(&quot;子类被执行...&quot;);
+        return map.values();
+    }
+} 
+
+public class Client
+{
+    public static void invoker()
+    {
+        //有父类的地方就有子类
+        Father f1 = new Father();
+        Son s1 = new Son();
+        HashMap map = new HashMap();
+        f1.doSomething(map);    //父类被执行
+        s1.doSomething(map);   //子类被执行
+    }
+
+    public static void main(String[] args)
+    {
+        invoker();
+    }
+}
+</code></pre><p><code>注意看上面子类重载父类方法时候的入参，子类s1替换父类f1导致输出结果发生了变化。</code></p>
+<pre><code>public class Father {
+    public Collection doSomething(HashMap map){
+        System.out.println(&quot;父类被执行...&quot;);        
+        return map.values();
+    }
+} 
+
+public class Son extends Father {
+    //放大输入参数类型
+    public Collection doSomething(Map map){
+        System.out.println(&quot;子类被执行...&quot;);
+        return map.values();
+    }
+} 
+
+public class Client
+{
+    public static void invoker()
+    {
+        //有父类的地方就有子类
+        Father f1 = new Father();
+        Son s1 = new Son();
+        HashMap map = new HashMap();
+        f1.doSomething(map);    //父类被执行
+        s1.doSomething(map);   //父类被执行
+    }
+    public static void main(String[] args)
+    {
+        invoker();
+    }
+}
+</code></pre><p><code>子类s1替换父类f1输出结果还是一样。</code></p>
+<p><code>说白了就是子类重载父类方法时，入参的范围要大于父类，这样在子类替换父类的时候，JAVA会根据入参，将方法绑定到父类方法上。</code></p>
+
+    </div>
 </div>
+
+<div class="cube-article-nav">
+    <ul>
+        
+        
+        <li class="next">
+            <a href="/2018/11/21/设计模式01单一职责原则/">
+                设计模式01单一职责原则
+                <i class="cube-icon cube-next" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+<!-- TODO 根据theme.comment的内容进行入口选择 -->
+
+
+
         </div>
         <div class="cube-right">
             
@@ -414,12 +446,12 @@ background-repeat: repeat-y;background-size: 1920px;
     <div class="cube-boxs">
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/categories/hexo/">#hexo</a>
         </div>
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/categories/设计模式/">#设计模式</a>
         </div>
         
@@ -450,7 +482,7 @@ background-repeat: repeat-y;background-size: 1920px;
         </div>
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/tags/六大原则/">#六大原则</a>
         </div>
         
