@@ -404,6 +404,26 @@ background-repeat: repeat-y;background-size: 1920px;
 
 <!-- TODO 根据theme.comment的内容进行入口选择 -->
 
+<div class="changyan-container">
+    <div id="SOHUCS" sid="2018/11/15/hexo-github搭建博客2-语法入门/"></div>
+</div>
+
+<style>
+    #SOHUCS #SOHU_MAIN .module-cmt-notice {
+        z-index: -1!important;
+        visibility: hidden!important;
+    }
+</style>
+
+<script type="text/javascript">
+    (function(){
+        var appid = 'cytVJyyCD';
+        var conf = 'prod_f0e5e9a4bba3527f30be0c5785b04553';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
+</script>
+
 
 
         </div>
@@ -560,7 +580,7 @@ background-repeat: repeat-y;background-size: 1920px;
         </div>
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/categories/设计模式/">#设计模式</a>
         </div>
         
@@ -591,7 +611,7 @@ background-repeat: repeat-y;background-size: 1920px;
         </div>
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/tags/六大原则/">#六大原则</a>
         </div>
         
