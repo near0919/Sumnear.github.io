@@ -12,7 +12,7 @@
     
     
     
-    <title>归档 | Sumnear&#39;s coding life</title>
+    <title>设计模式03依赖倒置原则 | Sumnear&#39;s coding life</title>
     <!-- inject:style -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
@@ -175,68 +175,137 @@ background-repeat: repeat-y;background-size: 1920px;
     
     <div class="cube-content" style="opacity:0.9">
         <div class="cube-left">
-            <style>
-    @media(max-width: 768px) {
-        body {
-            background-color: #fff!important;
-        }
-    }
-</style>
-<div class="cube-archives">
+            <div class="cube-article">
+    <h1 class="title">设计模式03依赖倒置原则</h1>
     
-        
-        <div class="cube-archive" style="margin-top: 0;">
-            
-                
-                   
-                            <h1 class="title">2018</h1>
-                            <ul class="posts">
-                   
-                            <li class="post">
-                                <a href="/2018/11/26/设计模式03依赖倒置原则/">设计模式03依赖倒置原则</a>
-                            </li>
-                
-            
-                
-                   
-                            <li class="post">
-                                <a href="/2018/11/22/设计模式02里氏替换原则/">设计模式02里氏替换原则</a>
-                            </li>
-                
-            
-                
-                   
-                            <li class="post">
-                                <a href="/2018/11/21/设计模式01单一职责原则/">设计模式01单一职责原则</a>
-                            </li>
-                
-            
-                
-                   
-                            <li class="post">
-                                <a href="/2018/11/17/hexo-github搭建博客3-问题整理/">hexo-github搭建博客3-问题整理</a>
-                            </li>
-                
-            
-                
-                   
-                            <li class="post">
-                                <a href="/2018/11/15/hexo-github搭建博客2-语法入门/">hexo-github搭建博客2-语法入门</a>
-                            </li>
-                
-            
-                
-                   
-                            <li class="post">
-                                <a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/">hexo-github搭建博客1-小试牛刀</a>
-                            </li>
-                
-            
-                    </ul>
-                        </div>
-        
+    <div class="cube-article-header">
+        <div class="cube-article-date">
+            <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+            <!-- moment.js对象 -->
+            2018-11-26
+        </div>
+        <div class="cube-article-tags">
+    <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+    
+    <a href="/tags/设计模式/">#设计模式</a>
+    
+    <a href="/tags/六大原则/">#六大原则</a>
     
 </div>
+    </div>
+    
+    <div class="cube-article-content cube-markdown">
+        
+        <h2 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h2><h2 id="Dependence-Inversion-Principle-DIP"><a href="#Dependence-Inversion-Principle-DIP" class="headerlink" title="Dependence Inversion Principle , DIP"></a>Dependence Inversion Principle , DIP</h2><p>High level modules should not depend upon low level modules.Both should depend upon abstractions. Abstractions should not depend upon details.Details should depend upon abstractions.  </p>
+<ol>
+<li><p>高层模块不应该依赖低层模块，两者都应该依赖其抽象； </p>
+</li>
+<li><p>抽象不应该依赖细节；  </p>
+</li>
+<li><p>细节应该依赖抽象。 </p>
+<p>面向接口编程  是 OOD Object-Oriented Design 面向对象设计的精髓  </p>
+<p><img src="/2018/11/26/设计模式03依赖倒置原则/20181125205410.png" alt="引入依赖倒置原则后的类图">  </p>
+</li>
+</ol>
+<pre><code>public interface ICar {
+
+    //是汽车就应该能跑
+    public void run();
+}
+
+public interface IDriver {
+
+  //车辆型号
+  public void setCar(ICar car);
+
+  //是司机就应该会驾驶汽车
+  public void drive();
+}  
+
+public class BMW  implements ICar{
+
+  //宝马车当然也可以开动了
+  public void run(){
+      System.out.println(&quot;宝马汽车开始运行...&quot;);
+      }
+ }
+
+public class Benz implements ICar{
+
+  //汽车肯定会跑
+  public void run(){
+      System.out.println(&quot;奔驰汽车开始运行...&quot;);
+      }
+}
+
+
+public class Driver implements IDriver{
+  private ICar car;
+
+  @Override
+  public void setCar(ICar car){
+      this.car = car;
+  }
+
+  //司机的主要职责就是驾驶汽车
+  @Override
+  public void drive(){
+      this.car.run();
+  }
+}
+</code></pre><p> 依赖倒置原则的本质就是通过抽象（接口或抽象类）使各个类或模块的实现彼此独立，互不影响，实现模块间的松耦合。</p>
+<ol>
+<li>每个类尽量都有接口或抽象类，或者抽象类和接口两者都有；</li>
+<li>变量的表面类型尽量是接口或者是抽象类；  </li>
+<li>任何类都不应该从具体类派生；</li>
+<li>尽量不要覆写基类的方法；  </li>
+<li><p>结合里氏替换原则使用。</p>
+<p>后面会讲到桥梁模式，可以更加深入的理解依赖倒置原则。平时的开发中service层都会去实现接口去开发，比如设计一个存储功能，先抽象出接口storgeInterface<br>，定义存文件、取文件接口，然后再根据使用场景实现它，比如localStorge、OssStorge等。</p>
+</li>
+</ol>
+
+    </div>
+</div>
+
+<div class="cube-article-nav">
+    <ul>
+        
+        
+        <li class="next">
+            <a href="/2018/11/22/设计模式02里氏替换原则/">
+                设计模式02里氏替换原则
+                <i class="cube-icon cube-next" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+<!-- TODO 根据theme.comment的内容进行入口选择 -->
+
+<div class="changyan-container">
+    <div id="SOHUCS" sid="2018/11/26/设计模式03依赖倒置原则/"></div>
+</div>
+
+<style>
+    #SOHUCS #SOHU_MAIN .module-cmt-notice {
+        z-index: -1!important;
+        visibility: hidden!important;
+    }
+</style>
+
+<script type="text/javascript">
+    (function(){
+        var appid = 'cytVJyyCD';
+        var conf = 'prod_f0e5e9a4bba3527f30be0c5785b04553';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
+</script>
+
+
+
         </div>
         <div class="cube-right">
             
@@ -386,7 +455,7 @@ background-repeat: repeat-y;background-size: 1920px;
     <div class="cube-boxs">
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/categories/hexo/">#hexo</a>
         </div>
         
@@ -412,12 +481,12 @@ background-repeat: repeat-y;background-size: 1920px;
         </div>
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/tags/markdown/">#markdown</a>
         </div>
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/tags/设计模式/">#设计模式</a>
         </div>
         
