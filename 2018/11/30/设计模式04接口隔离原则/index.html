@@ -12,7 +12,7 @@
     
     
     
-    <title>tags | Sumnear&#39;s coding life</title>
+    <title>设计模式04接口隔离原则 | Sumnear&#39;s coding life</title>
     <!-- inject:style -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
@@ -175,94 +175,86 @@ background-repeat: repeat-y;background-size: 1920px;
     
     <div class="cube-content" style="opacity:0.9">
         <div class="cube-left">
-            <div class="cube-boxs">
+            <div class="cube-article">
+    <h1 class="title">设计模式04接口隔离原则</h1>
     
+    <div class="cube-article-header">
+        <div class="cube-article-date">
+            <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+            <!-- moment.js对象 -->
+            2018-11-30
+        </div>
+        <div class="cube-article-tags">
+    <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
     
-    <div class="cube-box ">
-        <a href="/categories/IDEA/">IDEA</a>
-    </div>
+    <a href="/tags/设计模式/">#设计模式</a>
     
-    
-    <div class="cube-box ">
-        <a href="/categories/hexo/">hexo</a>
-    </div>
-    
-    
-    <div class="cube-box ">
-        <a href="/categories/设计模式/">设计模式</a>
-    </div>
-    
-</div>
-<div class="cube-archives">
-    
-    <div class="cube-archive">
-        <h1 class="title">IDEA</h1>
-        
-        <ul class="posts">
-            
-            <li class="post">
-                <a href="/2018/12/08/IDEA_keymap/">IDEA_keymap</a>
-            </li>
-            
-            <li class="post">
-                <a href="/2018/12/08/IDEA啧啧啧/">IDEA啧啧啧</a>
-            </li>
-            
-        </ul>
-        
-    </div>
-    
-    <div class="cube-archive">
-        <h1 class="title">hexo</h1>
-        
-        <ul class="posts">
-            
-            <li class="post">
-                <a href="/2018/11/15/hexo-github搭建博客2-语法入门/">hexo-github搭建博客2-语法入门</a>
-            </li>
-            
-            <li class="post">
-                <a href="/2018/11/14/hexo-github搭建博客1-小试牛刀/">hexo-github搭建博客1-小试牛刀</a>
-            </li>
-            
-        </ul>
-        
-    </div>
-    
-    <div class="cube-archive">
-        <h1 class="title">设计模式</h1>
-        
-        <ul class="posts">
-            
-            <li class="post">
-                <a href="/2018/12/20/设计模式06开闭原则/">设计模式06开闭原则</a>
-            </li>
-            
-            <li class="post">
-                <a href="/2018/12/20/设计模式05迪米特法则/">设计模式05迪米特法则</a>
-            </li>
-            
-            <li class="post">
-                <a href="/2018/11/30/设计模式04接口隔离原则/">设计模式04接口隔离原则</a>
-            </li>
-            
-            <li class="post">
-                <a href="/2018/11/26/设计模式03依赖倒置原则/">设计模式03依赖倒置原则</a>
-            </li>
-            
-            <li class="post">
-                <a href="/2018/11/22/设计模式02里氏替换原则/">设计模式02里氏替换原则</a>
-            </li>
-            
-            <li class="post">
-                <a href="/2018/11/21/设计模式01单一职责原则/">设计模式01单一职责原则</a>
-            </li>
-            
-        </ul>
-        
-    </div>
+    <a href="/tags/六大原则/">#六大原则</a>
     
 </div>
+    </div>
+    
+    <div class="cube-article-content cube-markdown">
+        
+        <h2 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h2><h2 id="Interface-Segregation-Principle"><a href="#Interface-Segregation-Principle" class="headerlink" title="Interface Segregation Principle"></a>Interface Segregation Principle</h2><h2 id="Clients-should-not-be-forced-to-depend-upon-interfaces-that-they-don’t-use-客户端不应该依赖它不需要的接口。"><a href="#Clients-should-not-be-forced-to-depend-upon-interfaces-that-they-don’t-use-客户端不应该依赖它不需要的接口。" class="headerlink" title="Clients should not be forced to depend upon interfaces that they don’t use.客户端不应该依赖它不需要的接口。"></a>Clients should not be forced to depend upon interfaces that they don’t use.客户端不应该依赖它不需要的接口。</h2><h2 id="The-dependency-of-one-class-to-another-one-should-depend-on-the-smallest-possible-interface-类间的依赖关系应该建立在最小的接口上。"><a href="#The-dependency-of-one-class-to-another-one-should-depend-on-the-smallest-possible-interface-类间的依赖关系应该建立在最小的接口上。" class="headerlink" title="The dependency of one class to another one should depend on the smallest possible interface.类间的依赖关系应该建立在最小的接口上。"></a>The dependency of one class to another one should depend on the smallest possible interface.类间的依赖关系应该建立在最小的接口上。</h2><p>接口细化、不要臃肿。单一职责原则是从业务逻辑的角度，接口隔离是从数量的角度。<br>1、接口尽量要小<br>根据接口隔离原则拆分接口时，首先必须满足单一职责原则。<br>2、接口要高内聚<br>要求在接口中尽量少公布public方法，接口是对外的承诺，承诺越少对系统的开发越有利，风险越低，成本越低。<br>3、定制服务<br>4、接口设计是有限度的</p>
+<p>接口隔离原则是对接口的定义，同时也是对类的定义，接口和类尽量使用原子接口或原子类来组装。在实践中可以根据以下几个规则来衡量：</p>
+<ol>
+<li>一个接口只服务于一个子模块或业务逻辑；</li>
+<li>通过业务逻辑压缩接口中的public方法，接口时长去回顾，尽量让接口达到“满身筋骨肉”，而不是“肥嘟嘟”的一大堆方法；</li>
+<li>已经被污染了的接口，尽量去修改，若变更的风险较大，则采用适配器模式进行转化处理。</li>
+<li>了解环境，拒绝盲从。每个项目或产品都有特定的环境因素，别看到大师是这样做的你就照抄，环境不同，接口拆分的标准就不同。深入了解业务逻辑。</li>
+</ol>
+<p>JAVA语言本来就是单继承多实现的，既然可以多实现，当初设计接口的时候按照单一职责和接口隔离职责就能规避很多风险和改动。</p>
+
+    </div>
+</div>
+
+<div class="cube-article-nav">
+    <ul>
+        
+        <li class="prev">
+            <a href="/2018/12/08/IDEA啧啧啧/">
+                <i class="cube-icon cube-prev" aria-hidden="true"></i>
+                IDEA啧啧啧
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2018/11/26/设计模式03依赖倒置原则/">
+                设计模式03依赖倒置原则
+                <i class="cube-icon cube-next" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+<!-- TODO 根据theme.comment的内容进行入口选择 -->
+
+<div class="changyan-container">
+    <div id="SOHUCS" sid="2018/11/30/设计模式04接口隔离原则/"></div>
+</div>
+
+<style>
+    #SOHUCS #SOHU_MAIN .module-cmt-notice {
+        z-index: -1!important;
+        visibility: hidden!important;
+    }
+</style>
+
+<script type="text/javascript">
+    (function(){
+        var appid = 'cytVJyyCD';
+        var conf = 'prod_f0e5e9a4bba3527f30be0c5785b04553';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
+</script>
+
+
+
         </div>
         <div class="cube-right">
             
@@ -417,12 +409,12 @@ background-repeat: repeat-y;background-size: 1920px;
         </div>
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/categories/hexo/">#hexo</a>
         </div>
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/categories/设计模式/">#设计模式</a>
         </div>
         
@@ -443,12 +435,12 @@ background-repeat: repeat-y;background-size: 1920px;
         </div>
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/tags/hexo/">#hexo</a>
         </div>
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/tags/markdown/">#markdown</a>
         </div>
         
@@ -458,7 +450,7 @@ background-repeat: repeat-y;background-size: 1920px;
         </div>
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/tags/六大原则/">#六大原则</a>
         </div>
         
