@@ -176,6 +176,111 @@ background-repeat: repeat-y;background-size: 1920px;
     <div class="cube-content" style="opacity:0.9">
         <div class="cube-left">
             
+<div class="cube-excerpt" id="cube-excerpt-git学习02rebase和merge">
+    <header class="cube-excerpt-header">
+        <h1><a href="/2018/12/24/git学习02rebase和merge/">git学习02rebase和merge</a></h1>
+        <div class="cube-excerpt-header-msg">
+            <div class="cube-excerpt-date">
+                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+                2018-12-24
+            </div>
+            <div class="cube-excerpt-tags">
+                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+                
+                <a href="/tags/git/" class="cube-excerpt-tag-link">#git</a>
+                
+            </div>
+        </div>
+    </header>
+    <article class="cube-excerpt-entry cube-markdown">
+        
+        
+           <p>变基（rebase）<br>当执行变基时，你的目标是确保功能分支从发布分支获取最新代码。<br>变基命令尝试逐个添加每个提交，并检查冲突。</p>
+<p>git merge是用来合并两个分支的。</p>
+<ol>
+<li>变基和合并（merge）在 Git 中都很有用。两种并无优劣之分。  </li>
+<li>在合并的情况下，你将有个合并提交。在变基的情况下，不会像合并提交那样有额外的提交。</li>
+<li>一种最佳的实践是一分为二。使用远端仓库中的最新代码更新本地仓库时，请使用变基。在处理拉取请求，以将功能分支和发布分支或主分支合并时，请使用合并。</li>
+<li>使用变基会更改历史提交记录（使其更整洁）。但话虽如此，改变历史提交存在风险。因此，请确保永远不要对远程存储仓库的代码使用变基。始终仅对本地仓库代码使用变基，来更改历史提交记录。</li>
+<li>如果对远端仓库进行变基，会制造许多混乱，因为其他开发人员无法识别新的历史记录。</li>
+<li><p>此外，如果在远端仓库上完成变基，则当其他开发人员尝试从远端仓库中拉取最新代码时，就可能会出问题。所以，我再重申一遍，变基总是仅在本地仓库中进行。 </p>
+<p><img src="/2018/12/24/git学习02rebase和merge/00.jpg" alt="git">    </p>
+<p> 远程origin和本地mywork都指向C2版本</p>
+<p><img src="/2018/12/24/git学习02rebase和merge/01.jpg" alt="git">  </p>
+<p> 远程origin新提交C3、C4版本；本地mywork新提交C5、C6版本</p>
+<p><img src="/2018/12/24/git学习02rebase和merge/02.jpg" alt="git">  </p>
+<p> 本地mywork merge origin</p>
+<p><img src="/2018/12/24/git学习02rebase和merge/03.jpg" alt="git">  </p>
+<p> 本地mywork rebase origin</p>
+<p><img src="/2018/12/24/git学习02rebase和merge/04.jpg" alt="git">  </p>
+<p> 本地mywork rebase origin 查看log的样子</p>
+<p><img src="/2018/12/24/git学习02rebase和merge/05.jpg" alt="git">  </p>
+<p> merger和rebase使用Git log的样子   </p>
+<p>当我们使用Git log来参看commit时，其commit的顺序也有所不同。<br> 假设C3提交于9:00AM,C5提交于10:00AM,C4提交于11:00AM，C6提交于12:00AM,<br> 对于使用git merge来合并所看到的commit的顺序（从新到旧）是：C7 ,C6,C4,C5,C3,C2,C1<br> 对于使用git rebase来合并所看到的commit的顺序（从新到旧）是：C7 ,C6‘,C5’,C4,C3,C2,C1<br>  因为C6’提交只是C6提交的克隆，C5’提交只是C5提交的克隆，<br> 从用户的角度看使用git rebase来合并后所看到的commit的顺序（从新到旧）是：C7 ,C6,C5,C4,C3,C2,C1</p>
+<p>解决冲突<br> 在rebase的过程中，也许会出现冲突(conflict). 在这种情况，Git会停止rebase并会让你去解决 冲突；在解决完冲突后，用”git-add”命令去更新这些内容的索引(index), 然后，你无需执行 git-commit,只要执行:<br> $ git rebase –continue<br> 这样git会继续应用(apply)余下的补丁。<br> 在任何时候，你可以用–abort参数来终止rebase的行动，并且”mywork” 分支会回到rebase开始前的状态。<br> $ git rebase –abort</p>
+<p>出处： <a href="https://blog.csdn.net/wh_19910525/article/details/7554489" target="_blank" rel="noopener">https://blog.csdn.net/wh_19910525/article/details/7554489</a></p>
+</li>
+</ol>
+
+        
+    </article>
+    <footer class="cube-excerpt-footer">
+        <a class="cube-excerpt-more" href="/2018/12/24/git学习02rebase和merge/">阅读全文</a>
+    </footer>
+</div>
+
+<div class="cube-excerpt" id="cube-excerpt-git学习01常用命令">
+    <header class="cube-excerpt-header">
+        <h1><a href="/2018/12/24/git学习01常用命令/">git学习01常用命令</a></h1>
+        <div class="cube-excerpt-header-msg">
+            <div class="cube-excerpt-date">
+                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+                2018-12-24
+            </div>
+            <div class="cube-excerpt-tags">
+                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+                
+                <a href="/tags/git/" class="cube-excerpt-tag-link">#git</a>
+                
+            </div>
+        </div>
+    </header>
+    <article class="cube-excerpt-entry cube-markdown">
+        
+        
+           <p>$ git config –global credential.helper store     记住密码<br>$ git config –global user.name “Your Name”    设置全局用户名<br>$ git config –global user.email “<a href="mailto:near0919@foxmail.com" target="_blank" rel="noopener">near0919@foxmail.com</a>“  设置全局邮箱<br>$ git init       在当前目录下初始化本地git仓库<br>$ git add readme.txt 把Working Directory（工作区）的内容 提交到 Index缓存区中<br>$ git commit -m “wrote a readme file” 把Index缓存区中的内容提交到 Repository版本库  -m 提交说明<br>$ git status 查看当前仓库的状态，<br>$ git diff readme.txt  查看difference<br>$ git diff HEAD – readme.txt  查看工作区和版本库里面最新版本的区别<br>$ git log 查看从近到远的提交日志  –pretty=oneline<br>首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。<br>$ git reset –hard HEAD^<br>$ git reset –hard 3628164<br>$ git reflog 用来记录你的每一次命令<br> <img src="/2018/12/24/git学习01常用命令/01.png" alt="git"><br>$ git checkout – readme.txt   git checkout – file可以丢弃工作区的修改<br>$ git reset HEAD readme.txt  命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。<br>$ git rm test.txt  确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit<br>$ ssh-keygen -t rsa -C “<a href="mailto:youremail@example.com" target="_blank" rel="noopener">youremail@example.com</a>“ 创建SSH key</p>
+<p>$ git remote rm origin 删除已有的远程库<br>$ git remote add origin <a href="mailto:git@gitee.com" target="_blank" rel="noopener">git@gitee.com</a>:SumTeam/gitDemo.git  本地关联远程库<br> <img src="/2018/12/24/git学习01常用命令/02.png" alt="git"><br> $ git pull origin master       fetch+meger<br>   fatal: refusing to merge unrelated histories<br>  $ git pull origin master –allow-unrelated-histories<br> （拒绝合并不相关的历史）<br> 出现这个问题的最主要原因还是在于本地仓库和远程仓库实际上是独立的两个仓库。假如我之前是直接clone的方式在本地建立起远程github仓库的克隆本地仓库就不会有这问题了。<br>  查阅了一下资料，发现可以在pull命令后紧接着使用–allow-unrelated-history选项来解决问题（该选项可以合并两个独立启动仓库的历史）。</p>
+<p> $ git push -u origin master 把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。<br> $ git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:michaelliao/gitskills.git  克隆一个本地库<br> $ git checkout -b dev = $ git branch dev + $ git checkout dev -b参数表示创建并切换<br> $ git branch  查看当前分支 列出所有分支，当前分支前面会标一个*号。<br> $ git merge dev   合并指定分支到当前分支<br> $ git branch -d dev 删除dev分支</p>
+<p> $ git log –graph –pretty=oneline –abbrev-commit   用git log –graph命令可以看到分支合并图。</p>
+<ul>
+<li>59bc1cb conflict fixed<br>|\<br>| * 75a857c AND simple</li>
+<li>| 400b400 &amp; simple<br>|/</li>
+<li>fec145a branch test</li>
+</ul>
+<p> $ git merge –no-ff -m “merge with no-ff” dev<br> 如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。<br> $ git stash  可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作<br> $ git stash list<br> 工作现场还在，Git把stash内容存在某个地方了，但是需要恢复一下，有两个办法：<br> 一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；<br> 另一种方式是用git stash pop，恢复的同时把stash内容也删了</p>
+<p> $ git branch -d feature-vulcan 删除分支<br> $ git branch -D feature-vulcan 强行删除分支</p>
+<p> $ git remote -v 查看远程库的信息<br> $ git push origin master  推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上</p>
+<p> $ git pull  = fetch + merge<br> $ git branch –set-upstream branch-name origin/branch-name 原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接</p>
+<p> $ git tag v1.0 打一个新标签<br> $ git tag  查看所有标签<br> 找到历史提交的commit id，然后打上 标签<br> $ git log –pretty=oneline –abbrev-commit<br> $ git tag v0.9 6224937  </p>
+<p> $ git show v0.9  查看v0.9标签详情</p>
+<p> 还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字：<br> $ git tag -a v0.1 -m “version 0.1 released” 3628164</p>
+<p> 还可以通过-s用私钥签名一个标签：<br> $ git tag -s v0.2 -m “signed version 0.2 released” fec145a</p>
+<p> 签名采用PGP签名，因此，必须首先安装gpg（GnuPG），如果没有找到gpg，或者没有gpg密钥对，就会报错：<br> gpg: signing failed: secret key not available<br> error: gpg failed to sign the data<br> error: unable to sign the tag</p>
+<p> 如果报错，请参考GnuPG帮助文档配置Key。</p>
+<p> $ git tag -d v0.1 删除标签<br> $ git push origin v1.0 推送某个标签到远程<br> $ git push origin –tags 一次性推送全部尚未推送到远程的本地标签</p>
+<p> 如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除：<br> $ git tag -d v0.9<br> Deleted tag ‘v0.9’ (was 6224937)</p>
+<p> 然后，从远程删除。删除命令也是push，但是格式如下：<br> $ git push origin :refs/tags/v0.9<br> To <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:michaelliao/learngit.git</p>
+<ul>
+<li>[deleted]         v0.9</li>
+</ul>
+
+        
+    </article>
+    <footer class="cube-excerpt-footer">
+        <a class="cube-excerpt-more" href="/2018/12/24/git学习01常用命令/">阅读全文</a>
+    </footer>
+</div>
+
 <div class="cube-excerpt" id="cube-excerpt-设计模式06开闭原则">
     <header class="cube-excerpt-header">
         <h1><a href="/2018/12/20/设计模式06开闭原则/">设计模式06开闭原则</a></h1>
@@ -844,251 +949,6 @@ public class Client
     </footer>
 </div>
 
-<div class="cube-excerpt" id="cube-excerpt-hexo-github搭建博客3-问题整理">
-    <header class="cube-excerpt-header">
-        <h1><a href="/2018/11/17/hexo-github搭建博客3-问题整理/">hexo-github搭建博客3-问题整理</a></h1>
-        <div class="cube-excerpt-header-msg">
-            <div class="cube-excerpt-date">
-                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
-                2018-11-17
-            </div>
-            <div class="cube-excerpt-tags">
-                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
-                
-            </div>
-        </div>
-    </header>
-    <article class="cube-excerpt-entry cube-markdown">
-        
-        
-           <blockquote><p>持续更新：</p>
-</blockquote>
-<h3 id="hexo官方文档"><a href="#hexo官方文档" class="headerlink" title="hexo官方文档"></a><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官方文档</a></h3><h3 id="2d插件"><a href="#2d插件" class="headerlink" title="2d插件"></a>2d插件</h3><p>1.安装这个live2d插件<br>检查package.json里有没有 hexo-heloper-live2d 依赖，有的话先卸载了，然后重新安装一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-helper-live2d  </span><br><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>  </p>
-<p>2.下载动画model<br>  <a href="https://github.com/xiazeyu/live2d-widget-models.git" target="_blank" rel="noopener">点这里</a><br>  <code>https://github.com/xiazeyu/live2d-widget-models.git</code><br>3.将packages里面所有的模版放到你博客的node_modules目录里<br>4.配置博客的配置文件，_config.yml<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https://github.com/xiazeyu/live2d-widget.js</span><br><span class="line">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span><br><span class="line">live2d:</span><br><span class="line">  model:</span><br><span class="line">    scale: 1</span><br><span class="line">    hHeadPos: 0.5</span><br><span class="line">    vHeadPos: 0.618</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">    position: right</span><br><span class="line">    hOffset: 0</span><br><span class="line">    vOffset: -20</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br><span class="line">    scale: 0.5</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7</span><br><span class="line">    opacityOnHover: 0.2</span><br></pre></td></tr></table></figure></p>
-<h3 id="载入图片"><a href="#载入图片" class="headerlink" title="载入图片"></a>载入图片</h3><p>1 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true，之后生成的博文则会在同路径下增加一个同名文件夹，用来放资源。</p>
-<p>2 执行 npm install hexo-asset-image –save</p>
-<p>3 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：<br>![你想输入的替代文字](xxxx/图片名.jpg)</p>
-<h3 id="CNAME-问题"><a href="#CNAME-问题" class="headerlink" title="CNAME 问题"></a>CNAME 问题</h3><p><code>gitpage</code>里面可以设置自己的域名访问，首先域名配置<code>CNAME</code> = 自己的 gitpage，然后在仓库设置 <code>custom domain</code> ；<br>  每次 hexo deploy 之后，custom domain 都会被重置为空，在hexo的<code>source目录</code>下 新建一个 <code>CANME 文件</code>，在里面写上你自己的域名，之后再提交就不会有问题啦！！  </p>
-<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p><a href="https://github.com/ZEROKISEKI/hexo-theme-cube" target="_blank" rel="noopener">我用的主题</a><br>搜索框的设计样式参考了ppoffice的设计样式,只要进行输入即可进行对应的搜索, 此功能需要在您的Hexo站点上进行hexo-generator-json-content的安装和设置<br><code>npm install hexo-generator-json-content --save</code><br>然后在您的Hexo站点的_config.yml(非主题的_config.yml)上进行对应的设置:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">  pages:</span><br><span class="line">    title: true</span><br><span class="line">    text: true</span><br><span class="line">    path: true</span><br><span class="line">    preview: true</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    text: true</span><br><span class="line">    path: true</span><br><span class="line">    preview: true</span><br></pre></td></tr></table></figure></p>
-<h3 id="tags和categories页面"><a href="#tags和categories页面" class="headerlink" title="tags和categories页面"></a>tags和categories页面</h3><p>默认是没有 categories 和 tags 的；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;tags&quot;  </span><br><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure></p>
-<p>编辑source下的tags和categories目录下的md文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure></p>
-
-        
-    </article>
-    <footer class="cube-excerpt-footer">
-        <a class="cube-excerpt-more" href="/2018/11/17/hexo-github搭建博客3-问题整理/">阅读全文</a>
-    </footer>
-</div>
-
-<div class="cube-excerpt" id="cube-excerpt-hexo-github搭建博客2-语法入门">
-    <header class="cube-excerpt-header">
-        <h1><a href="/2018/11/15/hexo-github搭建博客2-语法入门/">hexo-github搭建博客2-语法入门</a></h1>
-        <div class="cube-excerpt-header-msg">
-            <div class="cube-excerpt-date">
-                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
-                2018-11-15
-            </div>
-            <div class="cube-excerpt-tags">
-                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
-                
-                <a href="/tags/hexo/" class="cube-excerpt-tag-link">#hexo</a>
-                
-                <a href="/tags/markdown/" class="cube-excerpt-tag-link">#markdown</a>
-                
-            </div>
-        </div>
-    </header>
-    <article class="cube-excerpt-entry cube-markdown">
-        
-        
-           <p>本文内容为转载：<a href="https://blog.csdn.net/zhuzhuyule/article/details/58347687" target="_blank" rel="noopener">https://blog.csdn.net/zhuzhuyule/article/details/58347687</a><br>转载同时自己练习一下 补充一点内容</p>
-<p><a href="https://www.appinn.com/markdown/basic.html" title="Markdown" target="_blank" rel="noopener">Markdown</a> 是一种轻量级的 <strong>「标记语言」</strong>，<br><blockquote><p>优点在于：</p>
-</blockquote> </p>
-<ul>
-<li>专注你的文字内容而不是排版样式。</li>
-<li>轻松的导出 HTML、PDF 和本身的 .md 文件。 </li>
-<li>纯文本内容，兼容所有的文本编辑器与字处理软件。 </li>
-<li>可读，直观。适合所有人的写作语言。</li>
-</ul>
-<blockquote><p>并且具有以下特点：</p>
-</blockquote>
-<ul>
-<li>自动生成目录</li>
-<li>代码块高亮</li>
-<li>引用展示</li>
-<li>表格插入</li>
-<li>图片插入</li>
-<li>强调显示</li>
-<li>列表显示</li>
-<li>自动URL链接</li>
-</ul>
-<blockquote><p>Hexo下使用的MarkDown为Github的GFM，风格很漂亮，简洁美观大方。<br>但是GFM 的MarkDown语法和标准 的MarkDown稍有不同，使用过程中需要注意一些。</p>
-</blockquote>
-<h1 id="首先你要知道转义字符"><a href="#首先你要知道转义字符" class="headerlink" title="首先你要知道转义字符"></a>首先你要知道转义字符</h1><p>   <a href="http://tool.oschina.net/commons?type=2" title="转义字符常用对照表" target="_blank" rel="noopener">转义字符常用对照表</a><br>   或者用 \ 转义</p>
-<h1 id="语法简明概述"><a href="#语法简明概述" class="headerlink" title="语法简明概述"></a>语法简明概述</h1><p>分段 两个回车<br>换行 两个空格 + 回车<br>标题 # ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题<br>强调 **文字** ，\ __文字__ ， _文字_ ， *文字* ， 文字<br>引用 &gt; 注意后面紧跟个空格<br>表格 - 和 | 分割行和列 ， : 控制对其方式<br>代码块 四个空格 开头或， 使用``` 代码内容```<br>链接 [文字](链接地址)<br>图片 ![图片说明](图片地址) ，地址可以是本地路劲，也可以是网络地址<br>列表 * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格</p>
-<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p># 欢迎使用Markdown编辑器写博客    //一级标题 对应 &#60;h1&#62; &#60;/h1\&#62;<br>## 标题输入                     //二级标题 对应 &#60;h2&#62; &#60;/h2&#62;<br>### 三级标题                    //三级标题 对应 &#60;h3&#62; &#60;/h3&#62;<br>#### 四级标题                   //四级标题 对应 &#60;h4&#62; &#60;/h4&#62;<br>##### 五级标题                  //五级标题 对应 &#60;h5&#62; &#60;/h5&#62;<br>###### 六级标题                 //六级标题 对应 &#60;h6&#62; &#60;/h6&#62;<br>####### 七级标题                //抱歉，木有了（但是他会影响生成的目录，目录行多出一行空行）</p>
-<h1 id="内容强调"><a href="#内容强调" class="headerlink" title="内容强调"></a>内容强调</h1><h2 id="加粗、斜体"><a href="#加粗、斜体" class="headerlink" title="加粗、斜体"></a>加粗、斜体</h2><p>字体 **加粗** 显示<br>字体 *斜体* 显示<br>字体 ***加粗并斜体*** 显示</p>
-<p>字体 <strong>加粗</strong> 显示<br>字体 <em>斜体</em> 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示</p>
-<p>字体 __加粗__ 显示<br>字体 _斜体_ 显示<br>字体 ___加粗并斜体___ 显示<br>组合 *__加粗并斜体__* 显示</p>
-<p>字体 <strong>加粗</strong> 显示<br>字体 _斜体_ 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示<br>组合 <em><strong>加粗并斜体</strong></em> 显示</p>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>这样来 ~~删除一段文本~~</p>
-<p>这样来 <del>删除一段文本</del></p>
-<h1 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h1><p>使用<code>`</code>来强调字符   //想打出  <code>`</code> (反引号)需要转义的，加&#60;code&#62;&#60;/code&#62;标签强调<br>比如<code>`突出背景色`</code>来显示强调效果<br>上面的效果其实是这么实现的 `` `突出背景色` ``</p>
-<h1 id="引用显示"><a href="#引用显示" class="headerlink" title="引用显示"></a>引用显示</h1><p>引用过程中任然支持<code>Markdown</code>语法！</p>
-<p>标准使用<br>> 每行开始都使用 ‘>‘；<br>> 引用<strong>开始</strong>；<br>> 引用<strong>换行</strong>；<br>> 引用<strong>结束</strong>。</p>
-<p>> 还在引用中！</p>
-<p>两个回车结束引用！</p>
-<blockquote>
-<p>每行开始都使用 ‘&gt;’；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>。</p>
-</blockquote>
-<blockquote>
-<p>还在引用中！</p>
-</blockquote>
-<p><code>两个回车</code>结束引用！</p>
-<h1 id="省略使用"><a href="#省略使用" class="headerlink" title="省略使用"></a>省略使用</h1><p>> 仅第一行加引用；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>；</p>
-<p>两个回车结束引用,不在引用范围内了！</p>
-<blockquote>
-<p>仅第一行加引用；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>；</p>
-</blockquote>
-<p><code>两个回车</code>结束引用,不在引用范围内了！</p>
-<h1 id="嵌套使用"><a href="#嵌套使用" class="headerlink" title="嵌套使用"></a>嵌套使用</h1><p>> 动物<br>>> 水生动物<br>>> 陆生动物<br>>>> 猴子<br>>>> 人<br>>>>> 程序猿<br>>>>> 攻城狮<br>>>产品狗 //这里需要注意，没有空行间隔，忽略降级引用标记<br>射鸡虱   //这里需要注意，没有空行间隔，忽略降级引用标记</p>
-<p>>> 两栖类动物<br>>>> 大鳄鱼<br>唐老鸭</p>
-<p><code>两个回车</code>结束引用,不在引用范围内了！</p>
-<blockquote>
-<p>动物</p>
-<blockquote>
-<p>水生动物<br>陆生动物</p>
-<blockquote>
-<p>猴子<br>人</p>
-<blockquote>
-<p>程序猿<br>攻城狮<br>产品狗 //没有空行间隔，忽略降级引用标记<br>射鸡虱   //没有空行间隔，忽略降级引用标记</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>两栖类动物</p>
-<blockquote>
-<p>大鳄鱼<br>唐老鸭</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><code>两个回车</code>结束引用,不在引用范围内了！</p>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><h2 id="表格语法："><a href="#表格语法：" class="headerlink" title="表格语法："></a>表格语法：</h2><p>列1   | 列2 | 列3<br>----- | ---| ----<br>第1行 | 12  | 13<br>第2行 | 22  | 23<br>第3行 | 32  | 33  </p>
-<table>
-<thead>
-<tr>
-<th>列1</th>
-<th>列2</th>
-<th>列3 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>第1行</td>
-<td>12</td>
-<td>13  </td>
-</tr>
-<tr>
-<td>第2行</td>
-<td>22</td>
-<td>23  </td>
-</tr>
-<tr>
-<td>第3行</td>
-<td>32</td>
-<td>33  </td>
-</tr>
-</tbody>
-</table>
-<h2 id="可以使用冒号来定义对齐方式："><a href="#可以使用冒号来定义对齐方式：" class="headerlink" title="可以使用冒号来定义对齐方式："></a>可以使用冒号来定义对齐方式：</h2><p>| 左对齐    |  右对齐 | 居中 |<br>| :——– | ——-:| :–: |<br>| Computer  | 5000 元 |  1台 |<br>| Phone     | 1999 元 |  1部 |</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">左对齐</th>
-<th style="text-align:right">右对齐</th>
-<th style="text-align:center">居中</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Computer</td>
-<td style="text-align:right">5000 元</td>
-<td style="text-align:center">1台</td>
-</tr>
-<tr>
-<td style="text-align:left">Phone</td>
-<td style="text-align:right">1999 元</td>
-<td style="text-align:center">1部</td>
-</tr>
-</tbody>
-</table>
-<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><p>代码块语法遵循标准 <code>markdown</code> 代码，使用```开始，```结束 例如：</p>
-<p>```Python<br>#!/usr/bin/env python<br># -<em>- coding: utf-8 -</em>-<br>print ‘Hello World!<br> ```</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Hello World!</span></span><br></pre></td></tr></table></figure>
-<p> 如何在代码块中打出 ```<br> 实际上是使用 4个` 包含 3个` 就可以了，想表示更多，最外层+1就好了。<br> ````<br> ```<br> ```<br> ````   </p>
-<h1 id="链接插入"><a href="#链接插入" class="headerlink" title="链接插入"></a>链接插入</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[首页](http://zhuzhuyule.xyz)</span><br><span class="line">[我的信息](/about/)</span><br><span class="line">[纪念册](https://love.zhuzhuyule.xyz/)</span><br></pre></td></tr></table></figure>
-<p> <a href="http://zhuzhuyule.xyz" target="_blank" rel="noopener">首页</a><br> <a href="/about/">我的信息</a><br> <a href="https://love.zhuzhuyule.xyz/" target="_blank" rel="noopener">纪念册</a>  </p>
-<h1 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h1> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> ![图片alt](图片地址 &quot;图片title&quot;)  </span><br><span class="line"> 图片alt就是显示在图片下面的文字，相当于对图片内容的解释。 </span><br><span class="line"> 图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加  </span><br><span class="line">![我的头像](http://zhuzhuyule.xyz/images/avatar.png)  </span><br><span class="line">![我的头像](/images/avatar.png)</span><br></pre></td></tr></table></figure>
-<p> <img src="http://raw.githubusercontent.com/sumnear/blog/master/httpFiles/PerfectTime.png" alt="我的头像"><br> <img src="/2018/11/15/hexo-github搭建博客2-语法入门/PerfectTime.png" alt="我的头像">    </p>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p> * *列表展示<br> * *列表展示<br>    * *列表展示<br> + +列表展示<br> + +列表展示<br>    + +列表展示<br> - -列表展示<br> - -列表展示<br>    - -列表展示</p>
-<ul>
-<li>*列表展示</li>
-<li>*列表展示<ul>
-<li>*列表展示</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>+列表展示</li>
-<li>+列表展示<ul>
-<li>+列表展示</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>-列表展示</li>
-<li><p>-列表展示</p>
-<ul>
-<li>-列表展示  </li>
-</ul>
-<h2 id="有序列表-数字加点-二级序列-3个空格"><a href="#有序列表-数字加点-二级序列-3个空格" class="headerlink" title="有序列表   数字加点    二级序列 3个空格"></a>有序列表   数字加点    二级序列 3个空格</h2></li>
-</ul>
-<p>这种方式不用手动设置序号，自动生成列表序列</p>
-<ol>
-<li><strong>我是一级序列</strong> </li>
-<li><strong>我是一级序列</strong> </li>
-<li><strong>我是一级序列</strong> <ol>
-<li><em>我是二级序列</em> </li>
-<li><em>我是二级序列</em> </li>
-<li><em>我是二级序列</em> </li>
-</ol>
-</li>
-<li><strong>我是一级序列</strong> </li>
-<li><strong>我是一级序列</strong> <ol>
-<li><em>我是二级序列</em> </li>
-<li><em>我是二级序列</em> </li>
-<li><em>我是二级序列</em> <ol>
-<li><em>我是三级序列</em>  </li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<p>#链接自动检测  </p>
-<p>[超链接名](超链接地址 “超链接title”)<br>title可加可不加</p>
-<p> 首页:<a href="http://zhuzhuyule.xyz" target="_blank" rel="noopener">http://zhuzhuyule.xyz</a><br> 我的信息:<a href="http://zhuzhuyule.xyz/about/" target="_blank" rel="noopener">http://zhuzhuyule.xyz/about/</a><br> 纪念册:<a href="https://love.zhuzhuyule.xyz/" target="_blank" rel="noopener">https://love.zhuzhuyule.xyz/</a></p>
-<hr>
-<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>  三个或者三个以上的 - 或者 * 都可以。  </p>
-<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a><a href="https://www.jianshu.com/p/b03a8d7b1719" title="详细。。" target="_blank" rel="noopener">流程图</a></h1>
-        
-    </article>
-    <footer class="cube-excerpt-footer">
-        <a class="cube-excerpt-more" href="/2018/11/15/hexo-github搭建博客2-语法入门/">阅读全文</a>
-    </footer>
-</div>
-
 
 
 <ul class="cube-pagination cube-pagination-6">
@@ -1160,9 +1020,9 @@ public class Client
     <a title="人间如梦，一樽还酹江月。">人间如梦，一樽还酹江月。</a>
     
     <div class="count">
-        <a class="count articles"><span>11</span>文章</a>
-        <a class="count tags"><span>5</span>标签</a>
-        <a class="count categories"><span>3</span>分类</a>
+        <a class="count articles"><span>13</span>文章</a>
+        <a class="count tags"><span>6</span>标签</a>
+        <a class="count categories"><span>4</span>分类</a>
     </div>
 </div>
 
@@ -1199,7 +1059,7 @@ public class Client
                     <span>1</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/12/20/设计模式06开闭原则/" title="设计模式06开闭原则">设计模式06开闭原则</a>
+                    <a href="/2018/12/24/git学习02rebase和merge/" title="git学习02rebase和merge">git学习02rebase和merge</a>
                 </p>
             </div>
             
@@ -1213,7 +1073,7 @@ public class Client
                     <span>2</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/12/20/设计模式05迪米特法则/" title="设计模式05迪米特法则">设计模式05迪米特法则</a>
+                    <a href="/2018/12/24/git学习01常用命令/" title="git学习01常用命令">git学习01常用命令</a>
                 </p>
             </div>
         </li>
@@ -1226,7 +1086,7 @@ public class Client
                     <span>3</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/12/08/IDEA_keymap/" title="IDEA_keymap">IDEA_keymap</a>
+                    <a href="/2018/12/20/设计模式06开闭原则/" title="设计模式06开闭原则">设计模式06开闭原则</a>
                 </p>
             </div>
         </li>
@@ -1239,7 +1099,7 @@ public class Client
                     <span>4</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/12/08/IDEA啧啧啧/" title="IDEA啧啧啧">IDEA啧啧啧</a>
+                    <a href="/2018/12/20/设计模式05迪米特法则/" title="设计模式05迪米特法则">设计模式05迪米特法则</a>
                 </p>
             </div>
         </li>
@@ -1252,7 +1112,7 @@ public class Client
                     <span>5</span>
                 </p>
                 <p class="title">
-                    <a href="/2018/11/30/设计模式04接口隔离原则/" title="设计模式04接口隔离原则">设计模式04接口隔离原则</a>
+                    <a href="/2018/12/08/IDEA_keymap/" title="IDEA_keymap">IDEA_keymap</a>
                 </p>
             </div>
         </li>
@@ -1270,8 +1130,13 @@ public class Client
     <div class="cube-boxs">
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/categories/IDEA/">#IDEA</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/categories/git/">#git</a>
         </div>
         
         
@@ -1296,8 +1161,13 @@ public class Client
     <div class="cube-boxs">
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/tags/IDEA/">#IDEA</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/git/">#git</a>
         </div>
         
         
@@ -1316,7 +1186,7 @@ public class Client
         </div>
         
         
-        <div class="cube-box ">
+        <div class="cube-box-bg ">
             <a href="/tags/六大原则/">#六大原则</a>
         </div>
         
